@@ -1,0 +1,8 @@
+(8 SP) As a student in CS314, I want to  complete the 5 Eclipse/Git tutorials 
+so that I can use the tools in all assignments for this class.
+
+Acceptance Criteria:
+  A1rubric.txt
+  
+Tasks (estimation/actual time):
+(2hr) Read and work through all the tutorials. 
