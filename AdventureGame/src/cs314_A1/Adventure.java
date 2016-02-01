@@ -50,11 +50,6 @@ The main routine is AdventureGame.main
 
 */
 
-/*
- * Warning fixes:
- * 
- * */
-
 public class Adventure {
 
   private Room entrance;
@@ -64,14 +59,14 @@ public class Adventure {
       Room  outside = new Room();
       outside.setDesc(
         "You are standing outside, on the edge of a cliff;\n" +
-	" A creek runs alongside the cliff.\n" + 
-	"a cave opens straight down (outside).");
+        " A creek runs alongside the cliff.\n" + 
+        "a cave opens straight down (outside).");
    
    // Room 1:
       Room r1 = new Room();
       r1.setDesc(
-	 "The darkness is pierced by a bright light overhead.\n"
-	 + "There is a narrow, dark passage to the east (r1)." );
+	   "The darkness is pierced by a bright light overhead.\n"
+	   + "There is a narrow, dark passage to the east (r1)." );
 
    // Connect the outside to Room 1:
       outside.setSide(5,r1);
@@ -177,7 +172,6 @@ public class Adventure {
  // Now return the entrance:
     entrance = outside;
     return entrance;
-
   }
 }
 
