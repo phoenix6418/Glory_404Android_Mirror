@@ -1,6 +1,6 @@
 #                       Glory404 
 
-![alt tag](http://www.chapelofgrace.org.uk/wp-content/uploads/2012/07/glory.jpg =200x)
+![](http://www.chapelofgrace.org.uk/wp-content/uploads/2012/07/glory.jpg =200x)
 
 (for CS314 Team Glory404 Spring 16)
 
