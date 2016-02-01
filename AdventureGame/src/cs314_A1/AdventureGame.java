@@ -50,10 +50,9 @@ The main routine is AdventureGame.main
 
 import java.io.*;
 
-
 public class AdventureGame {
-	private Adventure theCave;
-	private Player thePlayer;
+//	private Adventure theCave; commented out this two obj for now to fix warnings
+//	private Player thePlayer;
 
   /** Our system-wide internal representation of directions
       is integers.  Here, we convert input string directions

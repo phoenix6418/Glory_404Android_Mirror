@@ -1,6 +1,5 @@
 package cs314_A1;
 
-
 /**  Adventure Game  Program Code
      Copyright (c) 1999 James M. Bieman
 
@@ -32,7 +31,7 @@ Updated Jan 2016 - gg
 
 The main routine is AdventureGame.main
 			    
-			    **/
+**/
 
 /** class Adventure: Primary method, createCave, creates the cave system.
         It eventually be replaced with a more flexible mechanism
@@ -50,6 +49,11 @@ The main routine is AdventureGame.main
 		I/O is to and from the console. 
 
 */
+
+/*
+ * Warning fixes:
+ * 
+ * */
 
 public class Adventure {
 
