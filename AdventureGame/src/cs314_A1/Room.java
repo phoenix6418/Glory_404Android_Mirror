@@ -11,6 +11,10 @@ package cs314_A1;
      Update August 2010: refactored Vector contents into ArrayList<Item> contents.
       This gets rid of the use of obsolete Vector and makes it type safe.
 				    
+		
+	 Update Feb 1, 2016:  Removed unused vector and enumeration imports to get rid
+	  of warnings.  Also added comments to describe the function of less obvious methods,
+	  specifically Room(), setSide(), enter(), exit(), and getDesc().  (Kerry McKean)
 **/
 
 // class Room

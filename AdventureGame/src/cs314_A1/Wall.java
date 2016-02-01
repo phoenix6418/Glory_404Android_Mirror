@@ -7,12 +7,14 @@ package cs314_A1;
      To run:     java AdventureGame
 
      The main routine is AdventureGame.main
+     
+     Feb 1, 2016 Update:  Added Class description comment.  (Kerry McKean)
 				    
 **/
 
-// class Wall
 /* The sides, floor, and ceiling of each room are walls by default.
  * Walls have no special properties, but they are impassable.
+ * Therefore, wall.enter(player) doesn't change player's location.
  */
 
 
