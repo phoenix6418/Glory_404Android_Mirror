@@ -5,9 +5,13 @@
 ** Team Members **
 
 >Xuehao(David) Hu   xuehaohu@rams.colostate.edu  David-Hu.org
->Bolin Liu          
+
+>Bolin Liu
+          
 >David Sahud
+
 >Kerry T. Mckean
 
 ** Project Info **
+
 Adventure Game
