@@ -1,4 +1,4 @@
-#Glory404 
+#                       Glory404 
 
 ![alt tag](http://www.chapelofgrace.org.uk/wp-content/uploads/2012/07/glory.jpg)
 
@@ -6,7 +6,7 @@
 
 ###Team Members
 
->Xuehao(David) Hu   xuehaohu@rams.colostate.edu  [David-Hu.org](http://david-hu.org/)
+>Xuehao(David) Hu             xuehaohu@rams.colostate.edu             [David-Hu.org](http://david-hu.org/)
 
 >Bolin Liu  
           
