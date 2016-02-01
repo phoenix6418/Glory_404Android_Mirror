@@ -11,15 +11,18 @@ package cs314_A1;
 **/
 
 // class Wall
+/* The sides, floor, and ceiling of each room are walls by default.
+ * Walls have no special properties, but they are impassable.
+ */
 
 
 
 public class Wall implements CaveSite {
-
- public void enter(Player p)
-	     {
-   System.out.println("Ouch! That hurts.");
- }
+	public void enter(Player p)
+	{
+		//You can't go through walls!
+		System.out.println("Ouch! That hurts.");
+	}
 
 }
 
