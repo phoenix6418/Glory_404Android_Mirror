@@ -132,7 +132,7 @@ public class Adventure {
      r8.setDesc("A lizard scampers past you, or is it a snake?\n" +
      		"a narrow passage runs to the east and an evin narrower one\n" +
      		"runs to the west (r8).");
-
+     
   // Room 9:
      Room r9 = new Room();
      r9.setDesc("Room r9.");
