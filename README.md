@@ -1,2 +1,2 @@
-# initAdvGG
-yet another initial adventure game repository
+#Team Glory404 for CS314 Spring 16
+<img src="readMeAssets/glory.jpb" width="400px"></img>
