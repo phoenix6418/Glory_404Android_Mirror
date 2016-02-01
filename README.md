@@ -6,13 +6,12 @@
 
 ###Team Members
 
->Xuehao(David) Hu             xuehaohu@rams.colostate.edu             [David-Hu.org](http://david-hu.org/)
-
->Bolin Liu  
-          
->David Sahud
-
->Kerry T. Mckean
+| Team Member      |              Email            |    Link         |
+|:----------------:|:-----------------------------:|:---------------:|
+|Xuehao(David) Hu  | xuehaohu@rams.colostate.edu   |[David-Hu.org](http://david-hu.org/)   |        
+|Bolin Liu         |                               |                 |
+|David Sahud       |                               |                 |
+|Kerry T. Mckean   |                               |                 |
 
 ###Project Info
 
