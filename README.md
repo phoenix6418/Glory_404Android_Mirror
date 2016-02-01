@@ -1,3 +1,5 @@
 #Glory404 
+
 for CS314 Spring 16
-<img src="readMeAssets/glory.jpb" width="400px"></img>
+
+![alt tag](http://www.chapelofgrace.org.uk/wp-content/uploads/2012/07/glory.jpg)
