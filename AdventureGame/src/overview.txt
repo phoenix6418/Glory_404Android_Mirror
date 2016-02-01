@@ -2,10 +2,13 @@ Team members:
 
 
 Specific contributions by each person:
+Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
 
 
 Time (min) spent by each person on this assignment:
+Kerry--150 minutes (including eclipse+git walkthrough)
 
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
+Kerry McKean
