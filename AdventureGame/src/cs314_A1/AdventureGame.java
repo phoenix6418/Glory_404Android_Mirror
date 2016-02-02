@@ -74,8 +74,13 @@ public class AdventureGame {
     return theDirection;
   }
 
-  /** choosePickupItem determines the specific item
-      that a player wants to pick up.   */
+  /** 
+   * params: player
+   * 		 BufferedReader
+   * return  Item (the choice of the item to pick up)
+   * 
+   * choosePickupItem determines the specific item that a player wants to pick up.   
+   * */
   private Item choosePickupItem(Player p,  BufferedReader keyB)
 				 throws IOException{
    Item[] contentsArray = (p.getLoc()).getRoomContents();
