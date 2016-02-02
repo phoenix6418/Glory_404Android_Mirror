@@ -33,23 +33,12 @@ The main routine is AdventureGame.main
 			    
 **/
 
-/** class Adventure: Primary method, createCave, creates the cave system.
-        It eventually be replaced with a more flexible mechanism
-        to support input and output from devices other than
-        an ASCII terminal.
-
-		Room descriptions are followed by a room identifier,
-		to ease debugging and testing.  These would be removed
-		to help confuse the user, which is our ultimate aim.
-
-		I haven't added all of the room descriptions.  They
-		will be done later.
-		
-		In this version all I/O is through standard I/O;
+/** class Adventure: Primary method, createCave, creates the cave system. It eventually be replaced with a more flexible mechanism
+        to support input and output from devices other than an ASCII terminal. Room descriptions are followed by a room identifier,
+		to ease debugging and testing.  These would be removed to help confuse the user, which is our ultimate aim.
+		I haven't added all of the room descriptions.  They will be done later. In this version all I/O is through standard I/O;
 		I/O is to and from the console. 
-
 */
-
 public class Adventure {
 
   private Room entrance;
