@@ -12,9 +12,7 @@ package cs314_A1;
 
 
 // class Treasure
-// Target for players. If treasure found, game ends.
-// functions: setDesc()  
-//			  getDesc()
+
 public class Treasure extends Item {
 }
 

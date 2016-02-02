@@ -12,8 +12,7 @@ package cs314_A1;
 
 
 // class Key.
-//functions: setDesc()  
-//			 getDesc()
+
 public class Key extends Item {
 }
 
