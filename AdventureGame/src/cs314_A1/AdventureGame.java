@@ -33,7 +33,6 @@ package cs314_A1;
      Jim Bieman
      September 1999.
 
-
 /**  Adventure Game  Program Code
 Copyright (c) 1999 James M. Bieman
 Updated August 2010
@@ -45,34 +44,35 @@ To compile: javac cs314.a2.AdventureGame.java
 To run:     java cs314.a2.AdventureGame
 
 The main routine is AdventureGame.main
-		    
-		    **/
+**/
 
 import java.io.*;
 
+/** 
+ * AdventureGame class
+ * 
+ * Our system-wide internal representation of directions is integers.  Here, we convert input string directions
+	into integers.  Internally, we use integers 0-9 as directions throughout the program.  This is a bit of
+	a cludge, but is simpler for now than creating a Direction class.  I use this cludge because Java in 1999 did not have
+	an enumerated data type.  */
 public class AdventureGame {
 //	private Adventure theCave; commented out this two obj for now to fix warnings
 //	private Player thePlayer;
-  /** Our system-wide internal representation of directions
-      is integers.  Here, we convert input string directions
-      into integers.  Internally, we use integers 0-9 as
-      directions throughout the program.  This is a bit of
-      a cludge, but is simpler for now than creating a Direction
-      class.  I use this cludge because Java in 1999 did not have
-      an enumerated data type.  */
-  private int convertDirection(String input){
-   char d = input.charAt(0);
-   int theDirection = 9999;
-   switch(d){
-       case 'n': case 'N': theDirection = 0;break;
-       case 's': case 'S': theDirection = 1;break;
-       case 'e': case 'E': theDirection = 2;break;
-       case 'w': case 'W': theDirection = 3;break;
-       case 'u': case 'U': theDirection = 4;break;
-       case 'd': case 'D': theDirection = 5;break;
-    }
-    return theDirection;
-  }
+
+	private int convertDirection(String input){
+		char d = input.charAt(0);
+		int theDirection = 9999;
+   
+		switch(d){
+			case 'n': case 'N': theDirection = 0;break;
+			case 's': case 'S': theDirection = 1;break;
+			case 'e': case 'E': theDirection = 2;break;
+			case 'w': case 'W': theDirection = 3;break;
+			case 'u': case 'U': theDirection = 4;break;
+			case 'd': case 'D': theDirection = 5;break;
+		}
+		return theDirection;
+	}
 
   /** 
    * params: player
@@ -81,38 +81,35 @@ public class AdventureGame {
    * 
    * choosePickupItem determines the specific item that a player wants to pick up.   
    * */
-  private Item choosePickupItem(Player p,  BufferedReader keyB)
-				 throws IOException{
-   Item[] contentsArray = (p.getLoc()).getRoomContents();
-   String inputString = "prepare";
-   int theChoice = -1;
-
+	private Item choosePickupItem(Player p,  BufferedReader keyB) throws IOException{
+		Item[] contentsArray = (p.getLoc()).getRoomContents();
+		String inputString = "prepare";
+		int theChoice = -1;
    
-   do 
-   {   
-       System.out.println("The room has:");
-       for (int i = 0; i < contentsArray.length ; i++)
-       System.out.println((i+1) + ": " + contentsArray[i].getDesc()); 
-       System.out.print("Enter the number of the item to grab: ");
-       inputString = keyB.readLine();
-       System.out.println('\n');
+		do 
+		{   
+			System.out.println("The room has:");
+			for (int i = 0; i < contentsArray.length ; i++)
+				System.out.println((i+1) + ": " + contentsArray[i].getDesc()); 
+			System.out.print("Enter the number of the item to grab: ");
+			inputString = keyB.readLine();
+			System.out.println('\n');
        
-       if (inputString.equals("")) inputString = " ";
+			if (inputString.equals("")) inputString = " ";
        
-       try  {
-	    theChoice = Integer.parseInt(inputString);
+        try  {
+        	theChoice = Integer.parseInt(inputString);
 	    } catch (NumberFormatException e) {
-	       System.out.println("Invalid input.");
-	       theChoice = -1;
+	        System.out.println("Invalid input.");
+	        theChoice = -1;
 	    }
        
-       if (theChoice < 0 || theChoice > contentsArray.length)
+        if (theChoice < 0 || theChoice > contentsArray.length)
     	   System.out.print("That item is not in the room.");
    
-   } while (theChoice < 0 || theChoice > contentsArray.length); 
+		}while (theChoice < 0 || theChoice > contentsArray.length); 
 
-   return contentsArray[theChoice-1];
-
+		return contentsArray[theChoice-1];
   }
 
   /** 
