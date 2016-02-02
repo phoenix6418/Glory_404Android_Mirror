@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #initAdvGG
 yet another initial adventure game repository
 =======
@@ -12,9 +11,9 @@ yet another initial adventure game repository
 
 | Team Member      |              Email            |    Link         |
 |:----------------:|:-----------------------------:|:---------------:|
-|Xuehao(David) Hu  | xuehaohu@rams.colostate.edu   |[David-Hu.org](http://david-hu.org/)   |        
+|David Sahud	   | David.Sahud@gmail.com         |                 |
 |Bolin Liu         |                               |                 |
-|David Sahud       |                               |                 |
+|Xuehao(David)Hu   | xuehaohu@rams.colostate.edu   |[David-Hu.org](http://david-hu.org/)   |
 |Kerry T. Mckean   |                               |                 |
 
 ###Team Rules
