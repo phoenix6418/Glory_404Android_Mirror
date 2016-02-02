@@ -12,7 +12,9 @@ package cs314_A1;
 
 
 // class Key.
-
+// key object to open doors
+// functions: setDesc() set description for the keys
+//			  getDesc() get description for the keys
 public class Key extends Item {
 }
 
