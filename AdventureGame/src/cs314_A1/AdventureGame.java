@@ -110,8 +110,13 @@ public class AdventureGame {
 
   }
 
-  /** chooseDropItem  determines the specific item
-      that a player wants to drop */
+  /** 
+   * params: player
+   * 		 BufferedReader 
+   * return  int ( the choice of item to drop)
+   * 
+   * chooseDropItem  determines the specific item that a player wants to drop 
+   * */
   private int chooseDropItem(Player p,  BufferedReader keyB) throws IOException{
      String inputString = "prepare";
      int theChoice = -1;
