@@ -53,7 +53,6 @@ import java.io.*;
 public class AdventureGame {
 //	private Adventure theCave; commented out this two obj for now to fix warnings
 //	private Player thePlayer;
-
   /** Our system-wide internal representation of directions
       is integers.  Here, we convert input string directions
       into integers.  Internally, we use integers 0-9 as
@@ -83,24 +82,29 @@ public class AdventureGame {
    String inputString = "prepare";
    int theChoice = -1;
 
-   do {   
+   
+   do 
+   {   
        System.out.println("The room has:");
        for (int i = 0; i < contentsArray.length ; i++)
-       System.out.println((i+1) + ": "
-			     + contentsArray[i].getDesc()); 
+       System.out.println((i+1) + ": " + contentsArray[i].getDesc()); 
        System.out.print("Enter the number of the item to grab: ");
        inputString = keyB.readLine();
        System.out.println('\n');
+       
        if (inputString.equals("")) inputString = " ";
+       
        try  {
 	    theChoice = Integer.parseInt(inputString);
 	    } catch (NumberFormatException e) {
 	       System.out.println("Invalid input.");
 	       theChoice = -1;
 	    }
+       
        if (theChoice < 0 || theChoice > contentsArray.length)
-	  System.out.print("That item is not in the room.");
-       } while (theChoice < 0 || theChoice > contentsArray.length); 
+    	   System.out.print("That item is not in the room.");
+   
+   } while (theChoice < 0 || theChoice > contentsArray.length); 
 
    return contentsArray[theChoice-1];
 
@@ -108,97 +112,118 @@ public class AdventureGame {
 
   /** chooseDropItem  determines the specific item
       that a player wants to drop */
-  private int chooseDropItem(Player p,  BufferedReader keyB)
-     throws IOException{
+  private int chooseDropItem(Player p,  BufferedReader keyB) throws IOException{
      String inputString = "prepare";
      int theChoice = -1;
 
      do {
-         System.out.println("You are carrying: " +
-				p.showMyThings() + '\n');
+         System.out.println("You are carrying: " + p.showMyThings() + '\n');
          System.out.print("Enter the number of the item to drop: " );
          inputString = keyB.readLine();
-         try  {theChoice = Integer.parseInt(inputString);}
-	 catch (NumberFormatException e) {
+         
+         try  
+         {
+        	 theChoice = Integer.parseInt(inputString);
+         }
+	     catch (NumberFormatException e) 
+         {
 	       System.out.println("Invalid input.");
 	       theChoice = -1;
-	       }
+	     }
+         
          if (theChoice < 0 || theChoice > p.numItemsCarried())
-	    System.out.print("Invalid choice.");
-        } while (theChoice < 0 || theChoice > p.numItemsCarried());
+	        System.out.print("Invalid choice.");
+        }while (theChoice < 0 || theChoice > p.numItemsCarried());
 
     return theChoice;
   }
 
+  
+  /**
+   * Params: void
+   * return: void
+   * 
+   * This function do:
+   * 	1. create a player, an Adventure cave 
+   *  	2. read in user command from keyboard, and parse it to shorter on letter command 
+   * 	3. It will runs infinitely 
+   * */
   public void startQuest() throws IOException{
    Player thePlayer = new Player();
    Adventure theCave = new Adventure();
    Room startRm = theCave.createAdventure();
    thePlayer.setRoom(startRm);
 
-   /** Create the keyboard to control the game; we only need one */
+   /** 
+    * Create the keyboard to control the game; we only need one 
+    * 
+    * */
     BufferedReader keyboard
 	  = new BufferedReader(new InputStreamReader(System.in));
     String inputString = "prepare";
-
-    /* The main query user, get command, interpret, execute cycle. */ 
+    /** 
+     * The main query user, get command, interpret, execute cycle. 
+     * 
+     * */ 
     while (inputString.charAt(0)!='q') {
        System.out.println(thePlayer.look());
        System.out.println("You are carrying: " +
 			   thePlayer.showMyThings() + '\n');
-        /* get next move */
-	int direction = 9;
+    
+       /** get next move */
+       int direction = 9;
 
-          System.out.println("Which way (n,s,e,w,u,d)," +
-			     " or grab (g) or toss (t) an item," +
-			     " or quit (q)?" + '\n');
-          inputString = keyboard.readLine(); 
-	  System.out.println('\n');
-	  if (inputString.equals("")) inputString = " ";
-	  char key = inputString.charAt(0);
-	  switch (key){
-	   // Go
-	     case 'n': case 'N': case 's': case 'S':
-	     case 'e': case 'E': case 'w': case 'W':
-	     case 'u': case 'U': case 'd': case 'D': 
-               direction = convertDirection(inputString);
-	       thePlayer.go(direction); 
-               break;
-           // Grab Item
-	     case 'g': case 'G':
-	       if (thePlayer.handsFull())
-		  System.out.println("Your hands are full.");
-               else if ((thePlayer.getLoc()).roomEmpty())
-                       System.out.println("The room is empty."); 
-		    else {
-	                 Item itemToGrab =
-	         	     choosePickupItem(thePlayer,keyboard);  
-	                 thePlayer.pickUp(itemToGrab);
-	                 (thePlayer.getLoc()).removeItem(itemToGrab);
+       System.out.println("Which way (n,s,e,w,u,d)," + " or grab (g) or toss (t) an item," + " or quit (q)?" + '\n');
+    
+       inputString = keyboard.readLine(); 
+	  
+       System.out.println('\n');
+	  
+       if (inputString.equals("")) inputString = " ";
+	  
+       char key = inputString.charAt(0);
+	  
+       switch (key){
+       		// parsed char is a direction char, Go to that direction
+	     	case 'n': case 'N': case 's': case 'S':
+	     	case 'e': case 'E': case 'w': case 'W':
+	     	case 'u': case 'U': case 'd': case 'D': 
+	     		direction = convertDirection(inputString);
+	     		thePlayer.go(direction); 
+	     		break;
+            // Grab Item
+	     	case 'g': case 'G':
+	     		if (thePlayer.handsFull())
+	     			System.out.println("Your hands are full.");
+	     		else if ((thePlayer.getLoc()).roomEmpty())
+                    System.out.println("The room is empty."); 
+	     		else {
+	                Item itemToGrab =
+	         	    choosePickupItem(thePlayer,keyboard);  
+	                thePlayer.pickUp(itemToGrab);
+	                (thePlayer.getLoc()).removeItem(itemToGrab);
 			 }
-	       break;
-	   // Drop Item
-	      case 't': case 'T':
-	      if (thePlayer.handsEmpty())
-		 System.out.println("You have nothing to drop.");
-              else {
-		    int itemToToss = 
-			 chooseDropItem(thePlayer,keyboard);
-	            thePlayer.drop(itemToToss);
-		   }
-           }
-	} 
+	        break;
+	        // Drop Item
+	     	case 't': case 'T':
+	     		if (thePlayer.handsEmpty())
+	     			System.out.println("You have nothing to drop.");
+	     		else {
+	     			int itemToToss = chooseDropItem(thePlayer,keyboard);
+	     			thePlayer.drop(itemToToss);
+	     		}
+      }//end of siwtch
+	} //end of while
+}//end of startQuest function
 
-  }
+  public static void main(String args[]) throws IOException{
+	  System.out.println("Welcome to the Adventure Game,\n" + 
+			  "which is inspired by an old game called the Colossal Cave Adventure.\n" + 
+			  "Java implementation Copyright (c) 1999 - 2012 by James M. Bieman\n" );
+ 
+	  AdventureGame theGame = new AdventureGame();
+	  theGame.startQuest();
+ 		}
 
-public static void main(String args[])
- throws IOException{
- System.out.println("Welcome to the Adventure Game,\n"
-    + "which is inspired by an old game called the Colossal Cave Adventure.\n"
-    + "Java implementation Copyright (c) 1999 - 2012 by James M. Bieman\n" );
- AdventureGame theGame = new AdventureGame();
- theGame.startQuest();
- }
-
-}
+}//end of AdventureGame
 
