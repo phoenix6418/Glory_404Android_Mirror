@@ -11,8 +11,10 @@ package cs314_A1;
 
      The main routine is AdventureGame.main
 				    
-**/
-
+/* Update1: Date: 2/1/2016 by Bolin Liu
+ * 			Add comments explaining what Item class,
+ *			setDesc() and getDesc() are doing.
+ */
 
 // class Item
 // object that locates in room.
