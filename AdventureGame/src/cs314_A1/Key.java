@@ -13,6 +13,10 @@ package cs314_A1;
 				    
 **/
 
+/* Update1: Date: 2/1/2016 by Bolin Liu
+ * 			Add comments explaining the purpose of Key class.
+ *
+ */
 
 // class Key.
 // key object to open doors
