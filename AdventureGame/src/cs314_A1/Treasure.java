@@ -14,10 +14,13 @@ package cs314_A1;
 				    
 **/
 
+/* Update1: Date: 2/1/2016 by Bolin Liu
+ * 			Add comments explaining what Treasure class do
+ */
 
 // class Treasure
 // target for players. if treasure is found, game ends.
-//functions: setDesc() set description for the keys
+// functions: setDesc() set description for the keys
 //			 getDesc() get description for the keys
 public class Treasure extends Item {
 }
