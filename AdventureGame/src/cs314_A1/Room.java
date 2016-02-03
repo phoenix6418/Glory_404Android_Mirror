@@ -11,6 +11,10 @@ package cs314_A1;
      Update August 2010: refactored Vector contents into ArrayList<Item> contents.
       This gets rid of the use of obsolete Vector and makes it type safe.
 				    
+		
+	 Update Feb 1, 2016:  Removed unused vector and enumeration imports to get rid
+	  of warnings.  Also added comments to describe the function of less obvious methods,
+	  specifically Room(), setSide(), enter(), exit(), and getDesc().  (Kerry McKean)
 **/
 
 // class Room
@@ -18,8 +22,6 @@ package cs314_A1;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
-import java.util.Enumeration;
-import java.util.Vector;
 
 public class Room implements CaveSite {
 
@@ -29,19 +31,21 @@ public class Room implements CaveSite {
 
   private ArrayList<Item> contents = new ArrayList<Item>();
 
+  //Default constructor is a cube with only walls
   Room() {
-    side[0] = new Wall();
-    side[1] = new Wall();
-    side[2] = new Wall();
-    side[3] = new Wall();
-    side[4] = new Wall();
-    side[5] = new Wall();
+    side[0] = new Wall();		//North
+    side[1] = new Wall();		//South
+    side[2] = new Wall();		//East
+    side[3] = new Wall();		//West
+    side[4] = new Wall();		//Up
+    side[5] = new Wall();		//Down
     }
 
   public void setDesc(String d){
     description = d;
     }
 
+  //For creating doors and connecting rooms
   public void setSide(int direction, CaveSite m){
    side[direction] = m;
    }
@@ -64,24 +68,33 @@ public class Room implements CaveSite {
    return contentsArray;
   }
 
-
+  //Used to enter into this particular room.
+  //Required to implement CaveSite.
   public void enter(Player p) {
    p.setLoc(this); 
   }
 
+  //Used to go to a different CaveSite from this room.
+  //Works even if side[direction] is a wall. 
   public void exit(int direction, Player p){
    side[direction].enter(p);
    }
 
+  /* Returns a string of the following form:
+   * "<Description of room>
+   * 
+   * Room Contents: <Description of item1> <Description of item2> ... <Description of final item>
+   * "
+   */
   public String getDesc(){
    ListIterator<Item> roomContents = contents.listIterator(); 
    String contentString = "";
    while(roomContents.hasNext())
-     contentString = 
+	contentString = 
 	contentString + (roomContents.next()).getDesc() + " ";
 
-     return description + '\n' + '\n' +
-     "Room Contents: " + contentString + '\n';
+   return description + '\n' + '\n' +
+   "Room Contents: " + contentString + '\n';
    }
 
 }
