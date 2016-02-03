@@ -1,14 +1,28 @@
 Team members:
+Xuehao(David) Hu
 
 
 Specific contributions by each person:
+<<<<<<< HEAD
 Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
 
 
 Time (min) spent by each person on this assignment:
 Kerry--150 minutes (including eclipse+git walkthrough)
+=======
+[Xuehao(David) Hu]
+
+
+Time (min) spent by each person on this assignment:
+[Xuehao(David) Hu]
+>>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
 
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
+<<<<<<< HEAD
 Kerry McKean
+=======
+
+sign: Xuehao(David) Hu
+>>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
