@@ -4,25 +4,42 @@ Xuehao(David) Hu
 
 Specific contributions by each person:
 <<<<<<< HEAD
+<<<<<<< HEAD
+Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
+=======
+[Xuehao(David) Hu]
+>>>>>>> master
+
+
+Time (min) spent by each person on this assignment:
+[Xuehao(David) Hu]
+=======
 Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
 
 
 Time (min) spent by each person on this assignment:
-Kerry--150 minutes (including eclipse+git walkthrough)
-=======
-[Xuehao(David) Hu]
-
-
-Time (min) spent by each person on this assignment:
+<<<<<<< HEAD
 [Xuehao(David) Hu]
 >>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
+=======
+Kerry--150 minutes (including eclipse+git walkthrough)
+>>>>>>> 325842240c3c21902239afd7add7cb2060f26f1a
+>>>>>>> master
 
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Kerry McKean
 =======
 
 sign: Xuehao(David) Hu
 >>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
+=======
+
+sign: Xuehao(David) Hu
+=======
+Kerry McKean
+>>>>>>> 325842240c3c21902239afd7add7cb2060f26f1a
+>>>>>>> master

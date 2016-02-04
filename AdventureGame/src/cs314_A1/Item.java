@@ -12,15 +12,18 @@ package cs314_A1;
 
 
 // class Item
+// object that locates in room.
 
 public class Item {
 
   private String description;
 
+  // set description for item
   public void setDesc(String d){
       description = d;
   }
 
+  // get description for item
   public String getDesc(){
 	     return description;
   }

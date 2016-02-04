@@ -16,6 +16,7 @@ yet another initial adventure game repository
 |Xuehao(David)Hu   | xuehaohu@rams.colostate.edu   |[David-Hu.org](http://david-hu.org/)   |
 |Kerry T. Mckean   |                               |                 |
 
+
 ###Team Rules
 | NO|  Rule            |Details    | Example |
 |:-:|:----------------:|:---------:|:-------:|
@@ -27,4 +28,3 @@ yet another initial adventure game repository
 ###Project Info
 
 Adventure Game
->>>>>>> 531e57313830beae18e4b932f3dfcf56ef1f7ebc
