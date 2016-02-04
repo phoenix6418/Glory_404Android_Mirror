@@ -3,16 +3,6 @@ Team members:
 
 
 Specific contributions by each person:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
-=======
-[Xuehao(David) Hu]
->>>>>>> master
-=======
->>>>>>> 69a370d128c7fd8c751a26cad6b8bfd3cca89fc1
-
 	- Bolin Liu:	Added comments to Item.java, Key.java and Treasure.java.
 					Edited team rules and added information.
 					Added update information to Item.java, Key.java and Treasure.java
@@ -28,48 +18,14 @@ Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
 					
 
 Time (min) spent by each person on this assignment:
-<<<<<<< HEAD
-[Xuehao(David) Hu]
-=======
-Kerry McKean added comments and fixed warnings in Room, Door, and Wall classes.
-
-
-Time (min) spent by each person on this assignment:
-<<<<<<< HEAD
-[Xuehao(David) Hu]
->>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
-=======
-Kerry--150 minutes (including eclipse+git walkthrough)
->>>>>>> 325842240c3c21902239afd7add7cb2060f26f1a
->>>>>>> master
-=======
-	Kerry:  270 minutes (including eclipse+git walkthrough)
+	Kerry:  270 minutes
 	Bolin:  300 minutes
 	Xuehao: 240 minutes
 	David:  360 minutes
->>>>>>> 69a370d128c7fd8c751a26cad6b8bfd3cca89fc1
-
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Kerry McKean
-=======
-
-sign: Xuehao(David) Hu
->>>>>>> 09c2fff8d7dc2347c24f409cdcbdf3d30a77d79f
-=======
-=======
->>>>>>> 69a370d128c7fd8c751a26cad6b8bfd3cca89fc1
-
 Xuehao(David) Hu
-Kerry McKean
-<<<<<<< HEAD
->>>>>>> 325842240c3c21902239afd7add7cb2060f26f1a
->>>>>>> master
-=======
 Bolin Liu
 David Sahud
->>>>>>> 69a370d128c7fd8c751a26cad6b8bfd3cca89fc1
