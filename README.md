@@ -11,10 +11,10 @@ yet another initial adventure game repository
 
 | Team Member      |              Email            |    Link         |
 |:----------------:|:-----------------------------:|:---------------:|
-|David Sahud	   | David.Sahud@gmail.com         |                 |
+|David Sahud	   | David.Sahud@gmail.com           |                 |
 |Bolin Liu         | lbl1991@rams.colostate.edu    |                 |
 |Xuehao(David)Hu   | xuehaohu@rams.colostate.edu   |[David-Hu.org](http://david-hu.org/)   |
-|Kerry T. Mckean   |                               |                 |
+|Kerry T. Mckean   | mckeankt@rams.colostate.edu   |                 |
 
 
 ###Team Rules
