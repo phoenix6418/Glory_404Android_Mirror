@@ -13,7 +13,10 @@ package cs314_A1;
 				    **/
 
 // interface CaveSite
-
+/*
+ Used as each side of the room.
+ This allows players to move between rooms through the doors that link the CaveSites
+ */
 public interface CaveSite{
   void enter(Player p);
 }
