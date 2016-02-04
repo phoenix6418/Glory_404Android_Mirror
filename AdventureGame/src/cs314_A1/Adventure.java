@@ -4,8 +4,7 @@ package cs314_A1;
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
 **/
 
-=======
->>>>>>> master
+
 /**  Adventure Game  Program Code
      Copyright (c) 1999 James M. Bieman
 
