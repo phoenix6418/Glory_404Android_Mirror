@@ -1,10 +1,11 @@
 package cs314_A1;
-
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
 **/
 
+=======
+>>>>>>> master
 /**  Adventure Game  Program Code
      Copyright (c) 1999 James M. Bieman
 
@@ -36,56 +37,50 @@ Updated Jan 2016 - gg
 
 The main routine is AdventureGame.main
 			    
-			    **/
+**/
 
-/** class Adventure: Primary method, createCave, creates the cave system.
-        It eventually be replaced with a more flexible mechanism
-        to support input and output from devices other than
-        an ASCII terminal.
-
-		Room descriptions are followed by a room identifier,
-		to ease debugging and testing.  These would be removed
-		to help confuse the user, which is our ultimate aim.
-
-		I haven't added all of the room descriptions.  They
-		will be done later.
-		
-		In this version all I/O is through standard I/O;
+/** class Adventure: Primary method, createCave, creates the cave system. It eventually be replaced with a more flexible mechanism
+        to support input and output from devices other than an ASCII terminal. Room descriptions are followed by a room identifier,
+		to ease debugging and testing.  These would be removed to help confuse the user, which is our ultimate aim.
+		I haven't added all of the room descriptions.  They will be done later. In this version all I/O is through standard I/O;
 		I/O is to and from the console. 
-
 */
-
 public class Adventure {
 
   private Room entrance;
   
+  /*Params: void
+   *Return: Room
+   *
+   *Create Rooms and make connections between rooms and return the "outside" room as as start point   
+   * */
   public Room createAdventure(){
-    // The outside: 
+      // The outside: 
       Room  outside = new Room();
       outside.setDesc(
         "You are standing outside, on the edge of a cliff;\n" +
-	" A creek runs alongside the cliff.\n" + 
-	"a cave opens straight down (outside).");
+        " A creek runs alongside the cliff.\n" + 
+        "a cave opens straight down (outside).");
    
-   // Room 1:
+      // Room 1:
       Room r1 = new Room();
       r1.setDesc(
-	 "The darkness is pierced by a bright light overhead.\n"
-	 + "There is a narrow, dark passage to the east (r1)." );
+	   "The darkness is pierced by a bright light overhead.\n"
+	   + "There is a narrow, dark passage to the east (r1)." );
 
-   // Connect the outside to Room 1:
+      // Connect the outside to Room 1:
       outside.setSide(5,r1);
       r1.setSide(4,outside);
       entrance = outside;
 
-   // Room 2:
+      // Room 2:
       Room r2 = new Room();
       r2.setDesc(
 	"You are in a gloomy oval shaped room with grey walls.\n" + 
 	 "There is a dim light to the west, and a narrow\n" +
 	 "dark hole to the east only about 18 inches high (r2).");
 
-  // Room 3:
+     // Room 3:
      Room r3 = new Room();
      r3.setDesc("You really need your flashlight here. \n"+
 		"There is a wide passage that quickly narrows\n"
@@ -93,35 +88,35 @@ public class Adventure {
 		+ "and a deep hole that appears to have no bottom\n"
 		+ "in the middle of the room (r3).");
 
-  // Connect Rooms 1, 2, & 3:
+     // Connect Rooms 1, 2, & 3:
      r1.setSide(2,r2);
      r2.setSide(3,r1);
      r2.setSide(2,r3);
      r3.setSide(3,r2);
 
-  // Room 4:
+     // Room 4:
      Room r4 = new Room();
      r4.setDesc("There is what looks like a giant grizzly bear\n"
 		+ "skull in a corner.  A passage leads to the west,\n"
 		+ "another one to the north, and a slippery route\n"
 		+ "goes down steeply. You can hear the shrieks of bats (r4).");
 
-  // Room 5:
+     // Room 5:
      Room r5 = new Room();
      r5.setDesc("There is a dim light from above and the shrieks\n"
     		    + "are clearly coming from a passageway to the east (r5).");
 
-  // Room 6:
+     // Room 6:
      Room r6 = new Room();
      r6.setDesc("The ceiling is full of bats.\n"
     		     + "You should put your hat on your head (r6).");
 
-  // Room 7:
+      // Room 7:
      Room r7 = new Room();
      r7.setDesc("This room is very damp. There are puddles on the floor\n" +
      		"and a steady dripping from above (r7).");
 
-  // Connect rooms 3, 4, 5, 6, & 7.
+     // Connect rooms 3, 4, 5, 6, & 7.
      r3.setSide(2,r4);
      r3.setSide(5,r5);
      r4.setSide(3,r3);
@@ -131,17 +126,17 @@ public class Adventure {
      r6.setSide(3,r5);
      r7.setSide(4,r4);
 
-  // Room 8:
+     // Room 8:
      Room r8 = new Room();
      r8.setDesc("A lizard scampers past you, or is it a snake?\n" +
      		"a narrow passage runs to the east and an evin narrower one\n" +
      		"runs to the west (r8).");
-
-  // Room 9:
+     
+     // Room 9:
      Room r9 = new Room();
      r9.setDesc("Room r9.");
 
-  // Room 10:
+     // Room 10:
      Room r10 = new Room();
      r10.setDesc("It looks like someone has been here.\n" +
      		"There is a pile of candy wrappers on the floor,\n" +
@@ -149,14 +144,14 @@ public class Adventure {
      		"Wait, there is a trap door on the floor,\n" +
      		"but it is locked (r10).");
 
- // Room 11:
+    // Room 11:
     Room r11 = new Room();
     r11.setDesc("This room is very dark. You can just barely see (r11).");
     Treasure theTreasure = new Treasure();
     theTreasure.setDesc("A bag filled with gold bars.");
     r11.addItem(theTreasure);
 
- // Lets connect them:
+    // Lets connect them:
     r4.setSide(0,r8);
     r8.setSide(1,r4);
     r8.setSide(3,r9);
@@ -164,20 +159,19 @@ public class Adventure {
     r9.setSide(2,r8);
     r10.setSide(3,r8);
 
- // Create a key and put it in r6:
+    // Create a key and put it in r6:
     Key theKey = new Key();
     theKey.setDesc("A shiny gold key.");
     r6.addItem(theKey);
 
- // We add a door between r10 and r11: 
+    // We add a door between r10 and r11: 
     Door theDoor = new Door(r10,r11,theKey);
     r10.setSide(5,theDoor);
     r11.setSide(4,theDoor);
 
- // Now return the entrance:
+    // Now return the entrance:
     entrance = outside;
     return entrance;
-
   }
 }
 
