@@ -2,8 +2,8 @@ package cs314_A2;
 
 public class AdventureGameModelFacade {
 	
-	Player thePlayer;
-	Adventure theCave;
+	private Player thePlayer;
+	private Adventure theCave;
 	
 
   AdventureGameModelFacade() { // we initialize
