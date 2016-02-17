@@ -47,11 +47,11 @@ public class AdventureGameModelFacade {
 
   
   public String getView(){ 
-     return thePlayer.getLoc().getDesc();
+     return thePlayer.look();
      }
 
   public String getItems(){
-     return(thePlayer.showMyThings());
+     return thePlayer.showMyThings() ;
   }
 
  // Surely you will need other methods to deal with
