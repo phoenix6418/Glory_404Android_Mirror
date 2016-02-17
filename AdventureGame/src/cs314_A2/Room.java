@@ -75,13 +75,14 @@ public class Room implements CaveSite {
   //Used to enter into this particular room.
   //Required to implement CaveSite.
   public String enter(Player p) {
-   return p.setLoc(this); 
+   p.setLoc(this);
+   return this.getDesc();
   }
 
   //Used to go to a different CaveSite from this room.
   //Works even if side[direction] is a wall. 
-  public void exit(int direction, Player p){
-   side[direction].enter(p);
+  public String exit(int direction, Player p){
+   return(side[direction].enter(p));
    }
 
   /* Returns a string of the following form:

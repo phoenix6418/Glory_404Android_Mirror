@@ -38,8 +38,8 @@ public class Player {
     }
     
     //move a direction to an adjacent room, if wall the room will not change
-    public void go(int direction){
-        myLoc.exit(direction,this);
+    public String go(int direction){
+        return myLoc.exit(direction,this);
     }
     
     //Item can only be added to myThings if the count does not exceed 2
@@ -76,9 +76,8 @@ public class Player {
     }
     
     //set the myLoc
-    public String setLoc(Room r){
+    public void setLoc(Room r){
     	myLoc = r;
-    	return "Setting myLoc...";
     }
     
     //get myLoc
