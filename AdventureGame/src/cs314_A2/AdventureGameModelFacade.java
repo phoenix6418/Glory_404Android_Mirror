@@ -2,9 +2,9 @@ package cs314_A2;
 
 public class AdventureGameModelFacade {
 	
-	Player thePlayer;
-	Adventure theCave;
-	String viewText;
+	private Player thePlayer;
+	private Adventure theCave;
+	private String viewText;
 	
 
   AdventureGameModelFacade() { // we initialize
