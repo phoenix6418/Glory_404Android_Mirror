@@ -107,5 +107,9 @@ public class Player {
     //returns itemsCount
     public int numItemsCarried(){return itemCount;}
     
+    public Item[] myThings () {
+        return myThings;
+    }
+    
 }
 

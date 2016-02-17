@@ -2,9 +2,9 @@ package cs314_A2;
 
 public class AdventureGameModelFacade {
 	
-	Player thePlayer;
-	Adventure theCave;
-	String viewText;
+	private Player thePlayer;
+	private Adventure theCave;
+	private String viewText;
 	
 
   AdventureGameModelFacade() { // we initialize
@@ -54,6 +54,19 @@ public class AdventureGameModelFacade {
   public String getItems(){
      return(thePlayer.showMyThings());
   }
+  
+	public boolean handsFull() {	return thePlayer.handsFull(); }
+	
+	public boolean handsEmpty() { return thePlayer.handsEmpty();}
+	
+	public Room getLoc() { return thePlayer.getLoc(); }
+ 
+	public void pickUp(Item choice) {thePlayer.pickUp(choice); }
+ 
+	public void drop (int toDrop) { thePlayer.drop (toDrop); }
+
+	public Item[] myThings () { return thePlayer.myThings(); }
+
 
  // Surely you will need other methods to deal with
  // picking up and dropping things.
