@@ -32,7 +32,7 @@ public class Player {
         myLoc = r;
     }
     
-    //Prints the contents of the room
+    //Returns the contents of the room
     public String look() {
         return myLoc.getDesc();
     }
@@ -81,7 +81,7 @@ public class Player {
     //get myLoc
     public Room getLoc(){return myLoc;}
     
-    //prints player's items
+    //Returns player's items
     public String showMyThings(){
         String outString = "";
         for (int n = 0; n < itemCount ; n++)
