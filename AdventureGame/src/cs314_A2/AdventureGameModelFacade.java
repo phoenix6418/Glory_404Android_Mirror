@@ -63,7 +63,9 @@ public class AdventureGameModelFacade {
 	public void pickUp(Item choice) {thePlayer.pickUp(choice); }
  
 	public void drop (int toDrop) { thePlayer.drop (toDrop); }
-	 
+
+	public Item[] myThings () { return thePlayer.myThings(); }
+
 
  // Surely you will need other methods to deal with
  // picking up and dropping things.

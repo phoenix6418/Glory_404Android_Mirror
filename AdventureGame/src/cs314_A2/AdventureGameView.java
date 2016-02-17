@@ -130,7 +130,29 @@ JLabel separator1 = addLabel
     // Left as an exercise. 
     private void drop() {
 	     //  Set up a dialog to talk to the model and 
-             //  determine what items to pick up.
+         //  determine what items to pick up.
+    	GBDialog msg = new GBDialog (null);
+        if (model.handsEmpty ()) {
+           msg.messageBox ("You have nothing to drop.");
+        } else {
+           Item[] drop = model.myThings();
+           Item choice = (Item) JOptionPane.showInputDialog(null,"Choose item that you want to drop",
+  		                       "DROP",
+  		                       JOptionPane.PLAIN_MESSAGE,
+  		                       null,
+  		                       drop,
+  		                       drop[0].toString());
+     		//if ((choice != null) && (choice.toString().length() > 0)) {
+           if (choice.toString().equals(drop[0].toString())) {
+              model.drop(1);
+              displayCurrentInfo();
+              return;
+     		} else {
+              model.drop(2);
+              displayCurrentInfo();
+              return;
+           }
+        }
    }
 
    public static void main (String[] args){
