@@ -1,13 +1,16 @@
 package cs314_A2;
 
 public class AdventureGameModelFacade {
-
- // some private fields to reference current location,
- // its description, what I'm carrying, etc.
- //
- // These methods and fields are left as exercises.
+	
+	Player thePlayer;
+	Adventure theCave;
+	
 
   AdventureGameModelFacade() { // we initialize
+	  thePlayer = new Player();
+	  theCave = new Adventure();
+	  thePlayer.setRoom(theCave.createAdventure());
+	  
   }
   
     //make new startQuest? ‹need to interact with interact with startQuest()
@@ -42,13 +45,13 @@ public class AdventureGameModelFacade {
       //3
     }
 
-  // You need to finish these getView and getItems methods.
+  
   public String getView(){ 
-     return("My view");
+     return thePlayer.getLoc().getDesc();
      }
 
   public String getItems(){
-     return("My items");
+     return(thePlayer.showMyThings());
   }
 
  // Surely you will need other methods to deal with
