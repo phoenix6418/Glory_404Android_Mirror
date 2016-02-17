@@ -14,8 +14,16 @@ public class AdventureGameModelFacade {
 			
   	}
 
+	/**
+	 * Based ont the adventureGame.java
+	 * move up:    4
+	 * move down:  5
+	 * move north: 0
+	 * move south: 1
+	 * move east:  2
+	 * move west:  3
+	 * */
   	public void goUp(){
-  		
   		thePlayer.go(4); 
   	}
 
