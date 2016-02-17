@@ -46,6 +46,9 @@ public class AdventureGameModelFacade {
       viewText = thePlayer.go(3);
     }
 
+  public Player getPlayer(){
+	  return this.thePlayer;
+  }
   
   public String getView(){ 
      return viewText;
