@@ -60,9 +60,9 @@ public class AdventureGameModelFacade {
 	
 	public Room getLoc() { return thePlayer.getLoc(); }
  
-	 public void pickUp(Item choice) {thePlayer.pickUp(choice); }
-	 
-	 public void drop (int toDrop) { thePlayer.drop (toDrop); }
+	public void pickUp(Item choice) {thePlayer.pickUp(choice); }
+ 
+	public void drop (int toDrop) { thePlayer.drop (toDrop); }
 	 
 
  // Surely you will need other methods to deal with
