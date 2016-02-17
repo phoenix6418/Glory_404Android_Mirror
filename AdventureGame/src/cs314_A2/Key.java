@@ -1,4 +1,4 @@
-package cs314_A1;
+package cs314_A2;
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
@@ -14,22 +14,10 @@ package cs314_A1;
 **/
 
 
-// class Item
-// object that locates in room.
-
-public class Item {
-
-  private String description;
-
-  // set description for item
-  public void setDesc(String d){
-      description = d;
-  }
-
-  // get description for item
-  public String getDesc(){
-	     return description;
-  }
-
+// class Key.
+// key object to open doors
+// functions: setDesc() set description for the keys
+//			  getDesc() get description for the keys
+public class Key extends Item {
 }
 

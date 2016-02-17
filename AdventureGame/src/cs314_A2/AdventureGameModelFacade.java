@@ -9,23 +9,37 @@ public class AdventureGameModelFacade {
 
   AdventureGameModelFacade() { // we initialize
   }
-
+  
+    //make new startQuest? ‹need to interact with interact with startQuest()
+    //get rid of wihle loop, just have it as an object that gets called.
+    
+    
+    //where most of the refactoring is needed...
+    //new game button?
+    //get description, messageBox(String msg)
+    //drop item, re got items for list...?
   public void goUp(){
+      //Player.go(2)
   }
 
   public void goDown(){
+      //Player.go(5)
     }
 
   public void goNorth(){
+      //0
     }
       
   public void goSouth(){
+      //1
     }
 
   public void goEast(){
+      //2
     }
       
   public void goWest(){
+      //3
     }
 
   // You need to finish these getView and getItems methods.
@@ -35,7 +49,7 @@ public class AdventureGameModelFacade {
 
   public String getItems(){
      return("My items");
-     }
+  }
 
  // Surely you will need other methods to deal with
  // picking up and dropping things.
