@@ -11,7 +11,7 @@ public class AdventureGameModelFacade {
 	private Player thePlayer = new Player();
 	
 	AdventureGameModelFacade() { // we initialize
-			
+		
   	}
 
 	/**
@@ -50,12 +50,10 @@ public class AdventureGameModelFacade {
   	// You need to finish these getView and getItems methods.
   public String getView(){ 
 	  return("My view");
-     
   	}
 
   	public String getItems(){
   		return("My items");
-     
   	}
 
  // Surely you will need other methods to deal with
