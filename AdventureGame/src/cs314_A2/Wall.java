@@ -1,4 +1,7 @@
 package cs314_A2;
+
+import BreezySwing.GBDialog;
+
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
@@ -27,7 +30,8 @@ public class Wall implements CaveSite {
 	public void enter(Player p)
 	{
 		//You can't go through walls!
-		System.out.println("Ouch! That hurts.");
+		GBDialog popup = new GBDialog(null);
+		popup.messageBox("Ouch! That hurts.");
 	}
 
 }
