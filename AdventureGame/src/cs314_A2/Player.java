@@ -37,7 +37,13 @@ public class Player {
         return myLoc.getDesc();
     }
     
-    //move a direction to an adjacent room, if wall the room will not change
+    //Attempts to move to an adjacent room.
+    //Successful movement changes myLoc and returns the destination's description.  Movement is successful when:
+    //	-The destination is an adjacent room.
+    //	-The destination is a locked door and player has key.  (Also returns the door's message.)
+    //Unsuccessful movement doesn't change myLoc and returns some other message.  Movement is unsuccessful when:
+    //	-Destination is a wall.  Returns the wall message
+    //	-Destination is a locked door and player lacks key.  Returns locked door message
     public String go(int direction){
         return myLoc.exit(direction,this);
     }
