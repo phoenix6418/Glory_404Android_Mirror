@@ -22,27 +22,27 @@ public class AdventureGameModelFacade {
     //get description, messageBox(String msg)
     //drop item, re got items for list...?
   public void goUp(){
-      //Player.go(2)
+      thePlayer.go(4);
   }
 
   public void goDown(){
-      //Player.go(5)
+      thePlayer.go(5);
     }
 
   public void goNorth(){
-      //0
+      thePlayer.go(0);
     }
       
   public void goSouth(){
-      //1
+      thePlayer.go(1);
     }
 
   public void goEast(){
-      //2
+      thePlayer.go(2);
     }
       
   public void goWest(){
-      //3
+      thePlayer.go(3);
     }
 
   
