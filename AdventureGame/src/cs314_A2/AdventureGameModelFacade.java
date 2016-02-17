@@ -53,6 +53,17 @@ public class AdventureGameModelFacade {
   public String getItems(){
      return thePlayer.showMyThings() ;
   }
+  
+	public boolean handsFull() {	return thePlayer.handsFull(); }
+	
+	public boolean handsEmpty() { return thePlayer.handsEmpty();}
+	
+	public Room getLoc() { return thePlayer.getLoc(); }
+ 
+	 public void pickUp(Item choice) {thePlayer.pickUp(choice); }
+	 
+	 public void drop (int toDrop) { thePlayer.drop (toDrop); }
+	 
 
  // Surely you will need other methods to deal with
  // picking up and dropping things.
