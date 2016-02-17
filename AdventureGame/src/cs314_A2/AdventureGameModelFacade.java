@@ -15,27 +15,28 @@ public class AdventureGameModelFacade {
   	}
 
   	public void goUp(){
+  		
   		thePlayer.go(4); 
   	}
 
   	public void goDown(){
-  		thePlayer.go(4);
+  		thePlayer.go(5);
   	}
 
   	public void goNorth(){
-    
+  		thePlayer.go(0);
   	}
       
   	public void goSouth(){
-    
+  		thePlayer.go(1);
   	}
 
   	public void goEast(){
-   
+  		thePlayer.go(2);
   	}
       
   	public void goWest(){
-   
+  		thePlayer.go(3);
   	}
 
   	// You need to finish these getView and getItems methods.
