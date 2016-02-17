@@ -99,6 +99,32 @@ JLabel separator1 = addLabel
    private void grab() {
       //  Set up a dialog to talk to the model and
       //  determine what items to pick up.
+		GBDialog msg = new GBDialog(null);
+			   
+			   if (model.handsFull()){
+		         msg.messageBox("Your hands are full.");
+			   }
+			   else if ((model.getLoc()).roomEmpty())
+		         msg.messageBox("The room is empty.");
+			   else {
+		         Item[] items = model.getLoc().getRoomContents();
+				   Item choice = (Item) JOptionPane.showInputDialog(null,"Choose item that you want to pick up",
+				                       "PICK",
+				                       JOptionPane.PLAIN_MESSAGE,
+				                       null,
+				                       items,
+				                       items[0].toString());
+		
+				   //If a string was returned, say so.
+				   if ((choice != null) && (choice.toString().length() > 0)) {
+				       //setLabel("Green eggs and... " + s + "!");
+		            model.getLoc().removeItem(choice);
+		            model.pickUp(choice);
+		            displayCurrentInfo();
+		
+				      return;
+				   }
+			   }
    }
 
     // Left as an exercise. 
