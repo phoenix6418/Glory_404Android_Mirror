@@ -1,22 +1,25 @@
 package cs314_A2;
 
+import cs314_A1.*;
+
 public class AdventureGameModelFacade {
 
 	// some private fields to reference current location,
 	// its description, what I'm carrying, etc.
 	//
 	// These methods and fields are left as exercises.
-
+	private Player thePlayer = new Player();
+	
 	AdventureGameModelFacade() { // we initialize
-  
+			
   	}
 
   	public void goUp(){
-  
+  		thePlayer.go(4); 
   	}
 
   	public void goDown(){
-    
+  		thePlayer.go(4);
   	}
 
   	public void goNorth(){
@@ -32,7 +35,6 @@ public class AdventureGameModelFacade {
   	}
       
   	public void goWest(){
-	  
    
   	}
 
