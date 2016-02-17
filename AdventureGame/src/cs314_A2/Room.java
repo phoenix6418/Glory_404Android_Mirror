@@ -74,8 +74,8 @@ public class Room implements CaveSite {
 
   //Used to enter into this particular room.
   //Required to implement CaveSite.
-  public void enter(Player p) {
-   p.setLoc(this); 
+  public String enter(Player p) {
+   return p.setLoc(this); 
   }
 
   //Used to go to a different CaveSite from this room.

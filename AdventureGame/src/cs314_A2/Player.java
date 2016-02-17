@@ -76,7 +76,10 @@ public class Player {
     }
     
     //set the myLoc
-    public void setLoc(Room r){myLoc = r;}
+    public String setLoc(Room r){
+    	myLoc = r;
+    	return "Setting myLoc...";
+    }
     
     //get myLoc
     public Room getLoc(){return myLoc;}

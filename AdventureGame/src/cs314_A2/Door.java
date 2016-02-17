@@ -30,27 +30,29 @@ public class Door implements CaveSite {
   private CaveSite outSite;
   private CaveSite inSite;
   
-  //Popup box for displaying messages
-  private GBDialog popup;
 
   /** We can construct a door at the site. */
   Door(CaveSite out, CaveSite in, Key k){
     outSite = out;
     inSite = in;
     myKey = k;
-    popup = new GBDialog(null);
   }
 
  /** A player will need the correct key to enter. */
- public void enter(Player p){
+ public String enter(Player p){
  if (p.haveItem(myKey)) {
-    popup.messageBox("Your key works! The door creaks open,");
-    popup.messageBox("and slams behind you after you pass through.");
+	String message = "";
+    message.concat("Your key works! The door creaks open,");
+    message.concat("and slams behind you after you pass through.");
     if (p.getLoc() == outSite) inSite.enter(p);
-    else if (p.getLoc() == inSite) outSite.enter(p); 
+    else if (p.getLoc() == inSite) outSite.enter(p);
+    return message;
  }
- else {popup.messageBox("You don't have the key for this door!");
-       popup.messageBox("Sorry.");
+ else {
+	 String message = "";
+	 message.concat("You don't have the key for this door!");
+     message.concat("\nSorry.");
+     return message;
       }
  }
 

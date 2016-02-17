@@ -27,11 +27,10 @@ import BreezySwing.GBDialog;
 
 
 public class Wall implements CaveSite {
-	public void enter(Player p)
+	public String enter(Player p)
 	{
 		//You can't go through walls!
-		GBDialog popup = new GBDialog(null);
-		popup.messageBox("Ouch! That hurts.");
+		return("Ouch! That hurts.");
 	}
 
 }
