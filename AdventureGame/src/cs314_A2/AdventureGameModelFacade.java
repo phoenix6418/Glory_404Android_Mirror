@@ -1,5 +1,7 @@
 package cs314_A2;
 
+import java.io.IOException;
+
 public class AdventureGameModelFacade {
 
  // some private fields to reference current location,
@@ -8,6 +10,11 @@ public class AdventureGameModelFacade {
  // These methods and fields are left as exercises.
 
   AdventureGameModelFacade() { // we initialize
+	  AdventureGame theGame = new AdventureGame();
+	  Player thePlayer = new Player();
+	  Adventure theCave = new Adventure();
+	  Room startRm = theCave.createAdventure();
+	  thePlayer.setRoom(startRm);
   }
     //make new startQuest? ‹need to interact with interact with startQuest()
     //get rid of wihle loop, just have it as an object that gets called.
