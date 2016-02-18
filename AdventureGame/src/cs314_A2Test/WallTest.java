@@ -12,10 +12,8 @@ public class WallTest {
 	@Test
 	public void enterTest(){
 		Player guy = new Player();
-		Room troom = new Room();
-		guy.setRoom(troom);
-		assertTrue(troom.enter(guy).equals("Ouch! That hurts."));
-		assertTrue(guy.getLoc() == troom);
+		Wall theWall = new Wall();
+		assertTrue(theWall.enter(guy).equals("Ouch! That hurts."));
 	}
 }
 
