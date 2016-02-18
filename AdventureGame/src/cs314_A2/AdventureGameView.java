@@ -130,6 +130,7 @@ JLabel separator1 = addLabel
     // Left as an exercise. 
     private void drop() {
 	     //  Set up a dialog to talk to the model and
+
          //  determine what items to pick up.
     	GBDialog msg = new GBDialog (null);
         if (model.handsEmpty ()) {

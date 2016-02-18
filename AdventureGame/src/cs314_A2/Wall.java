@@ -1,4 +1,5 @@
 package cs314_A2;
+
 import BreezySwing.GBDialog;
 
 /**

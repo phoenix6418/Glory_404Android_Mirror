@@ -36,7 +36,7 @@ public class Room implements CaveSite {
   private ArrayList<Item> contents = new ArrayList<Item>();
 
   //Default constructor is a cube with only walls
-  Room() {
+  public Room() {
     side[0] = new Wall();		//North
     side[1] = new Wall();		//South
     side[2] = new Wall();		//East

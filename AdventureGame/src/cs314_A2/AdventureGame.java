@@ -63,7 +63,7 @@ public class AdventureGame {
 //	private Adventure theCave; commented out this two obj for now to fix warnings
 //	private Player thePlayer;
 
-	protected int convertDirection(String input){
+	public int convertDirection(String input){
 		char d = input.charAt(0);
 		int theDirection = 9999;
    
