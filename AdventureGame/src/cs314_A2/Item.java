@@ -30,6 +30,10 @@ public class Item {
   public String getDesc(){
 	     return description;
   }
+  
+  public String toString() {
+	   return description;
+  }
 
 }
 

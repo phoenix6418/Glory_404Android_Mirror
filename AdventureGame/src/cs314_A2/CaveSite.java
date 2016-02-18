@@ -21,6 +21,6 @@ package cs314_A2;
  This allows players to move between rooms through the doors that link the CaveSites
  */
 public interface CaveSite{
-  void enter(Player p);
+  String enter(Player p);
 }
 

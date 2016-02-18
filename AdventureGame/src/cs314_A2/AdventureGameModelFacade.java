@@ -1,64 +1,62 @@
 package cs314_A2;
-
-import java.io.IOException;
-
 public class AdventureGameModelFacade {
-
- // some private fields to reference current location,
- // its description, what I'm carrying, etc.
- //
- // These methods and fields are left as exercises.
+	
+	private Player thePlayer;
+	private Adventure theCave;
+	private String viewText;
+	
 
   AdventureGameModelFacade() { // we initialize
-	  AdventureGame theGame = new AdventureGame();
-	  Player thePlayer = new Player();
-	  Adventure theCave = new Adventure();
-	  Room startRm = theCave.createAdventure();
-	  thePlayer.setRoom(startRm);
+	  thePlayer = new Player();
+	  theCave = new Adventure();
+	  thePlayer.setRoom(theCave.createAdventure());
+	  viewText = thePlayer.getLoc().getDesc();
   }
-    //make new startQuest? ‹need to interact with interact with startQuest()
-    //get rid of wihle loop, just have it as an object that gets called.
-    
-    
-    //where most of the refactoring is needed...
-    //new game button?
-    //get description, messageBox(String msg)
-    //drop item, re got items for list...?
+  
   public void goUp(){
-      //Player.go(2)
+
+      viewText = thePlayer.go(4);
   }
 
   public void goDown(){
-      //Player.go(5)
+      viewText = thePlayer.go(5);
     }
 
   public void goNorth(){
-      //0
+      viewText = thePlayer.go(0);
     }
       
   public void goSouth(){
-      //1
+      viewText = thePlayer.go(1);
     }
 
   public void goEast(){
-      //2
+      viewText = thePlayer.go(2);
     }
       
   public void goWest(){
-      //3
+      viewText = thePlayer.go(3);
     }
 
-  // You need to finish these getView and getItems methods.
+  
   public String getView(){ 
-     return("My view");
+     return viewText;
      }
 
   public String getItems(){
-     return("My items");
-     }
+     return(thePlayer.showMyThings());
+  }
+  
+	public boolean handsFull() {	return thePlayer.handsFull(); }
+	
+	public boolean handsEmpty() { return thePlayer.handsEmpty();}
+	
+	public Room getLoc() { return thePlayer.getLoc(); }
+ 
+	public void pickUp(Item choice) {thePlayer.pickUp(choice); }
+ 
+	public void drop (int toDrop) { thePlayer.drop (toDrop); }
 
- // Surely you will need other methods to deal with
- // picking up and dropping things.
+	public Item[] myThings () { return thePlayer.myThings(); }
 
 }
-

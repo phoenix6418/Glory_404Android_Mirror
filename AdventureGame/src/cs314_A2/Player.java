@@ -32,14 +32,20 @@ public class Player {
         myLoc = r;
     }
     
-    //Prints the contents of the room
+    //Returns the contents of the room
     public String look() {
         return myLoc.getDesc();
     }
     
-    //move a direction to an adjacent room, if wall the room will not change
-    public void go(int direction){
-        myLoc.exit(direction,this);
+    //Attempts to move to an adjacent room.
+    //Successful movement changes myLoc and returns the destination's description.  Movement is successful when:
+    //	-The destination is an adjacent room.
+    //	-The destination is a locked door and player has key.  (Also returns the door's message.)
+    //Unsuccessful movement doesn't change myLoc and returns some other message.  Movement is unsuccessful when:
+    //	-Destination is a wall.  Returns the wall message
+    //	-Destination is a locked door and player lacks key.  Returns locked door message
+    public String go(int direction){
+        return myLoc.exit(direction,this);
     }
     
     //Item can only be added to myThings if the count does not exceed 2
@@ -76,12 +82,14 @@ public class Player {
     }
     
     //set the myLoc
-    public void setLoc(Room r){myLoc = r;}
+    public void setLoc(Room r){
+    	myLoc = r;
+    }
     
     //get myLoc
     public Room getLoc(){return myLoc;}
     
-    //prints player's items
+    //Returns player's items
     public String showMyThings(){
         String outString = "";
         for (int n = 0; n < itemCount ; n++)
@@ -98,6 +106,10 @@ public class Player {
     
     //returns itemsCount
     public int numItemsCarried(){return itemCount;}
+    
+    public Item[] myThings () {
+        return myThings;
+    }
     
 }
 
