@@ -3,25 +3,17 @@ Team members:
 
 
 Specific contributions by each person:
-	- Bolin Liu:	Added comments to Item.java, Key.java and Treasure.java.
-					Edited team rules and added information.
-					Added update information to Item.java, Key.java and Treasure.java
-					Added team information to overview.txt
-	- Kerry McKean:	Added comments and fixed warnings in Room, Door, and Wall classes.		
-	- David Sahud:	Added comment descriptions of functions and classes in Player.java
-					and CaveSite.java.
-					Added the team names comment to each file.
-					Arranged a group meeting.
-	- Xuehao Hu:	Fixed warnings and added comments to Adenture.java and AdventureGame.java
-					Made up team rules.
-					Resolved conflicts for pull requests.
+	- Bolin Liu:	
+	- Kerry McKean:			
+	- David Sahud:	.
+	- Xuehao Hu:	
 					
 
 Time (min) spent by each person on this assignment:
-	Kerry:  270 minutes
-	Bolin:  300 minutes
-	Xuehao: 240 minutes
-	David:  360 minutes
+	Kerry:   minutes
+	Bolin:   minutes
+	Xuehao:  minutes
+	David:   minutes
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.

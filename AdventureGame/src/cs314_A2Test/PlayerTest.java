@@ -3,7 +3,11 @@ import cs314_A2.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
+/**
+Team: Glory404
+Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+**/
+//Written by: David Sahud
 public class PlayerTest {
 
 	@Test
@@ -166,13 +170,19 @@ public class PlayerTest {
 		assertFalse(guy.getLoc() == room2);
 	}
 	
-	//go
-	/*
-	wall
-	room 
-	door have key
-	door don't have key
-	*/
+	@Test
+	public void showMyThingsTest(){
+		Player guy = new Player();
+		Room troom = new Room();
+		troom.setDesc("This room is very dark. You can just barely see (test).");
+	    Treasure theTreasure = new Treasure();
+	    theTreasure.setDesc("A bag filled with gold bars.");
+	    troom.addItem(theTreasure);
+		guy.setRoom(troom);
+		assertTrue(guy.showMyThings().equals(""));
+		guy.pickUp(theTreasure);
+		assertTrue(guy.showMyThings().equals("1: A bag filled with gold bars. "));
+	}
 	//showMyThings
 	
 	
