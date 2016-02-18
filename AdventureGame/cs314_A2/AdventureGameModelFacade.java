@@ -53,8 +53,6 @@ public class AdventureGameModelFacade {
   public String getItems(){
      return(thePlayer.showMyThings());
   }
-<<<<<<< HEAD
-=======
   
 	public boolean handsFull() {	return thePlayer.handsFull(); }
 	
@@ -73,17 +71,14 @@ public class AdventureGameModelFacade {
 	}
 
 	public Item[] myThings () { return thePlayer.myThings(); }
+	public String getViewText(){
+		return viewText;
+	}
+	public boolean roomIsFull () { return thePlayer.getLoc().roomFull(); }
 
->>>>>>> 679cc09b735416ab568e648d71fb59fe7225f993
 
-<<<<<<< HEAD
-  public String getViewText(){
-	  return viewText;
-  }
  // Surely you will need other methods to deal with
  // picking up and dropping things.
-=======
->>>>>>> 804508df6e5dded111c57c948afb1bfc6c91286d
 
  
 }

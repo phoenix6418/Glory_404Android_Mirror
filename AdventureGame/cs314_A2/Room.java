@@ -65,6 +65,10 @@ public class Room implements CaveSite {
   public boolean roomEmpty(){
 	 return contents.isEmpty();
   }
+  
+  public boolean roomFull() {
+	   return contents.size() == 2;
+  }
 
   public Item[] getRoomContents(){
    Item[] contentsArray = new Item[contents.size()];
