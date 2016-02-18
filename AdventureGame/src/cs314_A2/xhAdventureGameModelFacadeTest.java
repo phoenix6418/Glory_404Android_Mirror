@@ -33,6 +33,34 @@ public class xhAdventureGameModelFacadeTest {
 	
 	@Test
 	public void testRoomWithWallsAndEntranceToOtherRooms() {
-
+		AdventureGameModelFacade model = new AdventureGameModelFacade();
+		
+		//make a room with wals in all directions
+		Room room_main = new Room();
+		
+		Room room_north = new Room();
+		room_north.setDesc("north");
+		
+		Room room_south = new Room();
+		room_south.setDesc("south");
+		
+		Room room_west = new Room();
+		room_west.setDesc("west");
+		
+		Room room_east = new Room();
+		room_east.setDesc("east");
+		
+		Room room_up = new Room();
+		room_up.setDesc("up");
+		
+		Room room_down = new Room();
+		room_down.setDesc("down");
+		
+		room_main.setSide(0, room_north);
+		room_main.setSide(1, room_south);
+		room_main.setSide(2, room_east);
+		room_main.setSide(3, room_west);
+		room_main.setSide(4, room_up);
+		room_main.setSide(5, room_down);
 	}
 }
