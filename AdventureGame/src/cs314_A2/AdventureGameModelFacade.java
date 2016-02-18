@@ -58,6 +58,9 @@ public class AdventureGameModelFacade {
      return(thePlayer.showMyThings());
   }
 
+  public String getViewText(){
+	  return viewText;
+  }
  // Surely you will need other methods to deal with
  // picking up and dropping things.
 
