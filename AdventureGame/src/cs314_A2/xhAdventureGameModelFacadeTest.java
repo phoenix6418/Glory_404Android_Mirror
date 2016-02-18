@@ -77,14 +77,14 @@ public class xhAdventureGameModelFacadeTest {
 		
 		model.getPlayer().setRoom(room_main);
 		model.goWest();
-		assertEquals(model.getViewText(),"west");
+		assertEquals(model.getViewText().split("\\s+")[0],"west");
 		
 		model.getPlayer().setRoom(room_main);
 		model.goNorth();
-		assertEquals(model.getViewText(),"north");
+		assertEquals(model.getViewText().split("\\s+")[0],"north");
 		
 		model.getPlayer().setRoom(room_main);
 		model.goSouth();
-		assertEquals(model.getViewText(),"south");
+		assertEquals(model.getViewText().split("\\s+")[0],"south");
 	}
 }
