@@ -61,9 +61,15 @@ public class AdventureGameModelFacade {
 	
 	public Room getLoc() { return thePlayer.getLoc(); }
  
-	public void pickUp(Item choice) {thePlayer.pickUp(choice); }
+	public void pickUp(Item choice){
+		thePlayer.pickUp(choice);
+		viewText = thePlayer.look();		//Updates room description to show items in room
+	}
  
-	public void drop (int toDrop) { thePlayer.drop (toDrop); }
+	public void drop (int toDrop) {
+		thePlayer.drop (toDrop);
+		viewText = thePlayer.look();		//Updates room description to show items in room
+	}
 
 	public Item[] myThings () { return thePlayer.myThings(); }
 
