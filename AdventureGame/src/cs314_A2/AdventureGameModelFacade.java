@@ -7,7 +7,7 @@ public class AdventureGameModelFacade {
 	private String viewText;
 	
 
-  AdventureGameModelFacade() { // we initialize
+  public AdventureGameModelFacade() { // we initialize
 	  thePlayer = new Player();
 	  theCave = new Adventure();
 	  thePlayer.setRoom(theCave.createAdventure());
