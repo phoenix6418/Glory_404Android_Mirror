@@ -1,6 +1,7 @@
 package cs314_A2Test;
 
 //Author: Kerry McKean
+//Tests the method in Wall.java
 
 import cs314_A2.*;
 import static org.junit.Assert.*;
