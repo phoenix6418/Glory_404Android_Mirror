@@ -42,20 +42,20 @@ public class Door implements CaveSite {
  public String enter(Player p){
  if (p.haveItem(myKey)) {
 	String message = "";
-    message.concat("Your key works! The door creaks open,\n");
-    message.concat("and slams behind you after you pass through.\n");
+    message += "Your key works! The door creaks open,\n";
+    message += "and slams behind you after you pass through.\n\n";
     if (p.getLoc() == outSite){
-    	message.concat(inSite.enter(p));
+    	message += inSite.enter(p);
     }
     else if (p.getLoc() == inSite){
-    	message.concat(outSite.enter(p));
+    	message += outSite.enter(p);
     }
     return message;
  }
  else {
 	 String message = "";
-	 message.concat("You don't have the key for this door!\n");
-     message.concat("Sorry.\n");
+	 message += "You don't have the key for this door!\n";
+     message += "Sorry.\n";
      return message;
       }
  }

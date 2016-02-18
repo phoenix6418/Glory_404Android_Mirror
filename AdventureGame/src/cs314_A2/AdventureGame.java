@@ -63,7 +63,7 @@ public class AdventureGame {
 //	private Adventure theCave; commented out this two obj for now to fix warnings
 //	private Player thePlayer;
 
-	private int convertDirection(String input){
+	public int convertDirection(String input){
 		char d = input.charAt(0);
 		int theDirection = 9999;
    
@@ -169,6 +169,7 @@ public class AdventureGame {
     * Create the keyboard to control the game; we only need one 
     * 
     * */
+   
     BufferedReader keyboard
 	  = new BufferedReader(new InputStreamReader(System.in));
     String inputString = "prepare";

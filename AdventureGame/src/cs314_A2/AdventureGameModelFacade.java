@@ -57,6 +57,28 @@ public class AdventureGameModelFacade {
   public String getItems(){
      return(thePlayer.showMyThings());
   }
+<<<<<<< HEAD
+=======
+  
+	public boolean handsFull() {	return thePlayer.handsFull(); }
+	
+	public boolean handsEmpty() { return thePlayer.handsEmpty();}
+	
+	public Room getLoc() { return thePlayer.getLoc(); }
+ 
+	public void pickUp(Item choice){
+		thePlayer.pickUp(choice);
+		viewText = thePlayer.look();		//Updates room description to show items in room
+	}
+ 
+	public void drop (int toDrop) {
+		thePlayer.drop (toDrop);
+		viewText = thePlayer.look();		//Updates room description to show items in room
+	}
+
+	public Item[] myThings () { return thePlayer.myThings(); }
+
+>>>>>>> 679cc09b735416ab568e648d71fb59fe7225f993
 
   public String getViewText(){
 	  return viewText;
