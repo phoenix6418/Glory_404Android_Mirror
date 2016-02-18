@@ -62,5 +62,29 @@ public class xhAdventureGameModelFacadeTest {
 		room_main.setSide(3, room_west);
 		room_main.setSide(4, room_up);
 		room_main.setSide(5, room_down);
+		
+		model.getPlayer().setRoom(room_main);
+		model.goDown();
+		assertEquals(model.getViewText().split("\\s+")[0],"down");
+		
+		model.getPlayer().setRoom(room_main);
+		model.goUp();
+		assertEquals(model.getViewText().split("\\s+")[0],"up");
+		
+		model.getPlayer().setRoom(room_main);
+		model.goEast();
+		assertEquals(model.getViewText().split("\\s+")[0],"east");
+		
+		model.getPlayer().setRoom(room_main);
+		model.goWest();
+		assertEquals(model.getViewText(),"west");
+		
+		model.getPlayer().setRoom(room_main);
+		model.goNorth();
+		assertEquals(model.getViewText(),"north");
+		
+		model.getPlayer().setRoom(room_main);
+		model.goSouth();
+		assertEquals(model.getViewText(),"south");
 	}
 }
