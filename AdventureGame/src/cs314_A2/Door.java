@@ -1,8 +1,10 @@
-package cs314_A1;
+package cs314_A2;
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
  **/
+
+import BreezySwing.GBDialog;
 
 /**  Adventure Game  Program Code
      Copyright (c) 1999 James M. Bieman
@@ -27,6 +29,7 @@ public class Door implements CaveSite {
   /** The door's location. */
   private CaveSite outSite;
   private CaveSite inSite;
+  
 
   /** We can construct a door at the site. */
   Door(CaveSite out, CaveSite in, Key k){
@@ -36,15 +39,24 @@ public class Door implements CaveSite {
   }
 
  /** A player will need the correct key to enter. */
- public void enter(Player p){
+ public String enter(Player p){
  if (p.haveItem(myKey)) {
-    System.out.println("Your key works! The door creaks open,");
-    System.out.println("and slams behind you after you pass through.");
-    if (p.getLoc() == outSite) inSite.enter(p);
-    else if (p.getLoc() == inSite) outSite.enter(p); 
+	String message = "";
+    message.concat("Your key works! The door creaks open,\n");
+    message.concat("and slams behind you after you pass through.\n");
+    if (p.getLoc() == outSite){
+    	message.concat(inSite.enter(p));
+    }
+    else if (p.getLoc() == inSite){
+    	message.concat(outSite.enter(p));
+    }
+    return message;
  }
- else {System.out.println("You don't have the key for this door!");
-       System.out.println("Sorry.");
+ else {
+	 String message = "";
+	 message.concat("You don't have the key for this door!\n");
+     message.concat("Sorry.\n");
+     return message;
       }
  }
 

@@ -1,4 +1,4 @@
-package cs314_A1;
+package cs314_A2;
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
@@ -29,6 +29,10 @@ public class Item {
   // get description for item
   public String getDesc(){
 	     return description;
+  }
+  
+  public String toString() {
+	   return description;
   }
 
 }
