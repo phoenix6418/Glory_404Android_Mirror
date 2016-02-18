@@ -7,7 +7,7 @@ Specific contributions by each person:
 	- Kerry McKean:	Refactored room descriptions and other output to display in the "Your view" box instead of printing to console.  Wrote JUnit tests for Item.java and Wall.java
 	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
 				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
-	- Xuehao Hu:	
+	- Xuehao Hu: finished the player movements in AdventureGameModeFacad.java, and added Junit tests for those movements functions
 	
 Summarized test results for all unit tests: 
 Total Test: 19
