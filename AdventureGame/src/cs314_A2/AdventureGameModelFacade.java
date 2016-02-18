@@ -16,17 +16,6 @@ public class AdventureGameModelFacade {
 
   public void goUp(){
 
-=======
-    //make new startQuest? ‹need to interact with interact with startQuest()
-    //get rid of wihle loop, just have it as an object that gets called.
-    
-    
-    //where most of the refactoring is needed...
-    //new game button?
-    //get description, messageBox(String msg)
-    //drop item, re got items for list...?
-  public void goUp(){
->>>>>>> e3af08480aeac66e4c03d5cba28dd3f6da1b68e0
       viewText = thePlayer.go(4);
   }
 
@@ -77,12 +66,8 @@ public class AdventureGameModelFacade {
 
 	public Item[] myThings () { return thePlayer.myThings(); }
 
-<<<<<<< HEAD
-}
-=======
 
- // Surely you will need other methods to deal with
- // picking up and dropping things.
 
+ 
 }
->>>>>>> e3af08480aeac66e4c03d5cba28dd3f6da1b68e0
+
