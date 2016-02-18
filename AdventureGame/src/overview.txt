@@ -32,7 +32,7 @@ showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, hand
 Time (min) spent by each person on this assignment:
 	Kerry:   480 minutes
 	Bolin:   450 minutes
-	Xuehao:  minutes
+	Xuehao:  410 minutes
 	David:   420 minutes
 
 CSU Honor Pledge:
@@ -40,3 +40,4 @@ I have not given, received, or used any unauthorized assistance.
 David Sahud
 Kerry McKean
 Bolin Liu
+Xuehao Hu
