@@ -86,5 +86,6 @@ public class xhAdventureGameModelFacadeTest {
 		model.getPlayer().setRoom(room_main);
 		model.goSouth();
 		assertEquals(model.getViewText().split("\\s+")[0],"south");
+		
 	}
 }
