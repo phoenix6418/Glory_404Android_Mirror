@@ -1,4 +1,4 @@
-package cs314_A1;
+package cs314_A2;
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
@@ -36,7 +36,7 @@ public class Room implements CaveSite {
   private ArrayList<Item> contents = new ArrayList<Item>();
 
   //Default constructor is a cube with only walls
-  Room() {
+  public Room() {
     side[0] = new Wall();		//North
     side[1] = new Wall();		//South
     side[2] = new Wall();		//East
@@ -74,14 +74,15 @@ public class Room implements CaveSite {
 
   //Used to enter into this particular room.
   //Required to implement CaveSite.
-  public void enter(Player p) {
-   p.setLoc(this); 
+  public String enter(Player p) {
+   p.setLoc(this);
+   return this.getDesc();
   }
 
   //Used to go to a different CaveSite from this room.
   //Works even if side[direction] is a wall. 
-  public void exit(int direction, Player p){
-   side[direction].enter(p);
+  public String exit(int direction, Player p){
+   return(side[direction].enter(p));
    }
 
   /* Returns a string of the following form:
