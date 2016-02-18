@@ -9,6 +9,7 @@ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
 //Written by: David Sahud
 public class PlayerTest {
 
+	//Written by: David Sahud
 	@Test
 	public void lookTest(){
 		Player guy = new Player();
@@ -17,7 +18,7 @@ public class PlayerTest {
 		guy.setRoom(troom);
 		assertTrue(troom.getDesc().equals(guy.look()));
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void pickupTest(){
 		Player guy = new Player();
@@ -39,6 +40,7 @@ public class PlayerTest {
 		
 		
 	}
+	//Written by: David Sahud
 	@Test
 	public void handsFullTest(){
 		
@@ -63,6 +65,7 @@ public class PlayerTest {
 		guy.pickUp(anotherTes);
 	    assertTrue(guy.handsFull() == true);	
 	}
+	//Written by: David Sahud
 	@Test
 	public void haveItemTest(){
 		Player guy = new Player();
@@ -90,7 +93,7 @@ public class PlayerTest {
 	    assertTrue(guy.haveItem(anotherTes) == true);
 	    assertTrue(guy.haveItem(theTreasure) == false);	    
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void dropTest(){
 		Player guy = new Player();
@@ -108,7 +111,7 @@ public class PlayerTest {
 	    assertTrue(guy.numItemsCarried() == 0);
 	    
 	}
-	
+	//Written by: David Sahud
 	@Test 
 	public void numitemsCarriedTest(){
 		Player guy = new Player();
@@ -128,7 +131,7 @@ public class PlayerTest {
 	    assertTrue(guy.numItemsCarried() == 0);
 	//numItemsCarried	
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void emptyTest(){
 		Player guy = new Player();
@@ -148,7 +151,7 @@ public class PlayerTest {
 		guy.drop(1);
 	    assertTrue(guy.handsEmpty() == true);	
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void setRoomTest(){
 		Player guy = new Player();
@@ -158,7 +161,7 @@ public class PlayerTest {
 		assertTrue(guy.getLoc() == troom);
 		assertFalse(guy.getLoc() == room2);
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void setLocTest(){
 		Player guy = new Player();
@@ -168,7 +171,7 @@ public class PlayerTest {
 		assertTrue(guy.getLoc() == troom);
 		assertFalse(guy.getLoc() == room2);
 	}
-	
+	//Written by: David Sahud
 	@Test
 	public void showMyThingsTest(){
 		Player guy = new Player();

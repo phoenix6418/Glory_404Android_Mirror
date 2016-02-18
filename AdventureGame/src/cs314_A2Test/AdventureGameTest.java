@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 public class AdventureGameTest {
-
+	//Written by: David Sahud
 	@Test
 	public void convertDirectionTest() {		
 		AdventureGame game = new AdventureGame();
