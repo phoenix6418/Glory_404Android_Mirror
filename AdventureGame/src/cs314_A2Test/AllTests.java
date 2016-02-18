@@ -1,4 +1,4 @@
-package cs314_A2;
+package cs314_A2Test;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
