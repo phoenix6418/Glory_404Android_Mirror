@@ -5,19 +5,33 @@ Team members:
 Specific contributions by each person:
 	- Bolin Liu:	
 	- Kerry McKean:			
-	- David Sahud:	.
+	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
+				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
 	- Xuehao Hu:	
-					
+	
+Summarized test results for all unit tests: 
+Total Test: 13
+All tests pass.
+
+ItemTest.java: 1 test
+setDesc, getDesc
+
+WallTest.java: 1 test
+enter
+
+AdventureGameTest.java: 1 test
+convertDirectionTest
+
+PlayerTest.java: 10 tests
+showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, handsFull, pickup, look.
+
 
 Time (min) spent by each person on this assignment:
 	Kerry:   minutes
 	Bolin:   minutes
 	Xuehao:  minutes
-	David:   minutes
+	David:   420 minutes
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
-Kerry McKean
-Xuehao(David) Hu
-Bolin Liu
 David Sahud
