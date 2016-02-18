@@ -30,4 +30,9 @@ public class xhAdventureGameModelFacadeTest {
 		model.goSouth();
 		assertEquals(model.getViewText(),"Ouch! That hurts.");
 	}
+	
+	@Test
+	public void testRoomWithWallsAndEntranceToOtherRooms() {
+
+	}
 }
