@@ -10,7 +10,7 @@ Specific contributions by each person:
 	- Xuehao Hu:	
 	
 Summarized test results for all unit tests: 
-Total Test: 13
+Total Test: 19
 All tests pass.
 
 ItemTest.java: 1 test
@@ -18,6 +18,9 @@ setDesc, getDesc
 
 WallTest.java: 1 test
 enter
+
+RoomTest.java: 6 test
+enter, roomFull, roomEmpty, removeItem, addItem, setSide, setDesc, getRoomContents, exit, getDesc()
 
 AdventureGameTest.java: 1 test
 convertDirectionTest
