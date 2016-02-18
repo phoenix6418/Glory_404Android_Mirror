@@ -44,9 +44,9 @@ B. (8 SP) As a CS 314 student, I want to implement Dr. Bieman's
      available as text commands.
 
   Tasks (estimation/actual time):
-  (1hr) Design interface/implementation of visual look of GUI
-  (2hr) Item interaction. Allow for players Drop/pickup/listitems for GUI
-  (2hr) Player movement. Allow players to movement. Implement user to move up/down/east/west/south/north.
-  (2hr) Display text output in GUI. This includes, room description, game directions, and error messages.
-  (2hr) JUnit unit tests for all methods. 
-  (1hr) Final run through of project, and tar all necessary files.
+  (1hr/1.5hr) Design interface/implementation of visual look of GUI
+  (2hr/3hr) Item interaction. Allow for players Drop/pickup/listitems for GUI
+  (2hr/20min) Player movement. Allow players to movement. Implement user to move up/down/east/west/south/north.
+  (2hr/3hr) Display text output in GUI. This includes, room description, game directions, and error messages.
+  (2hr/5hr) JUnit unit tests for all methods. 
+  (1hr/1hr) Final run through of project, and tar all necessary files.

@@ -1,5 +1,8 @@
 package cs314_A2;
-
+/**
+Team: Glory404
+Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+**/
 import javax.swing.*;
 
 
@@ -129,7 +132,8 @@ JLabel separator1 = addLabel
 
     // Left as an exercise. 
     private void drop() {
-	     //  Set up a dialog to talk to the model and 
+	     //  Set up a dialog to talk to the model and
+
          //  determine what items to pick up.
     	GBDialog msg = new GBDialog (null);
         if (model.handsEmpty ()) {

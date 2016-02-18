@@ -3,29 +3,35 @@ Team members:
 
 
 Specific contributions by each person:
-	- Bolin Liu:	Added comments to Item.java, Key.java and Treasure.java.
-					Edited team rules and added information.
-					Added update information to Item.java, Key.java and Treasure.java
-					Added team information to overview.txt
-	- Kerry McKean:	Added comments and fixed warnings in Room, Door, and Wall classes.		
-	- David Sahud:	Added comment descriptions of functions and classes in Player.java
-					and CaveSite.java.
-					Added the team names comment to each file.
-					Arranged a group meeting.
-	- Xuehao Hu:	Fixed warnings and added comments to Adenture.java and AdventureGame.java
-					Made up team rules.
-					Resolved conflicts for pull requests.
-					
+	- Bolin Liu:	
+	- Kerry McKean:			
+	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
+				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
+	- Xuehao Hu:	
+	
+Summarized test results for all unit tests: 
+Total Test: 13
+All tests pass.
+
+ItemTest.java: 1 test
+setDesc, getDesc
+
+WallTest.java: 1 test
+enter
+
+AdventureGameTest.java: 1 test
+convertDirectionTest
+
+PlayerTest.java: 10 tests
+showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, handsFull, pickup, look.
+
 
 Time (min) spent by each person on this assignment:
-	Kerry:  270 minutes
-	Bolin:  300 minutes
-	Xuehao: 240 minutes
-	David:  360 minutes
+	Kerry:   minutes
+	Bolin:   minutes
+	Xuehao:  minutes
+	David:   420 minutes
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
-Kerry McKean
-Xuehao(David) Hu
-Bolin Liu
 David Sahud
