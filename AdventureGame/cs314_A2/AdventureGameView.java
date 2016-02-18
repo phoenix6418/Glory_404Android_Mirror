@@ -138,7 +138,9 @@ JLabel separator1 = addLabel
     	GBDialog msg = new GBDialog (null);
         if (model.handsEmpty ()) {
            msg.messageBox ("You have nothing to drop.");
-        } else {
+        } else if (model.roomIsFull()) {
+            msg.messageBox ("Room is full."); 
+    	} else {
            Item[] drop = model.myThings();
            Item choice = (Item) JOptionPane.showInputDialog(null,"Choose item that you want to drop",
   		                       "DROP",

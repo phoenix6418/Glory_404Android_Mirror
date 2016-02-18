@@ -3,7 +3,7 @@ Team members:
 
 
 Specific contributions by each person:
-	- Bolin Liu:	
+	- Bolin Liu:	Made Grab and Drop functions work. Add useful methods to make connections between classes. wrote tests for room.
 	- Kerry McKean:	Refactored room descriptions and other output to display in the "Your view" box instead of printing to console.  Wrote JUnit tests for Item.java and Wall.java
 	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
 				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
@@ -28,7 +28,7 @@ showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, hand
 
 Time (min) spent by each person on this assignment:
 	Kerry:   480 minutes
-	Bolin:   minutes
+	Bolin:   450 minutes
 	Xuehao:  minutes
 	David:   420 minutes
 
@@ -36,3 +36,4 @@ CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
 David Sahud
 Kerry McKean
+Bolin Liu
