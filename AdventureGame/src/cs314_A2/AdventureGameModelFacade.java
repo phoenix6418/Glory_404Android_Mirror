@@ -1,5 +1,8 @@
 package cs314_A2;
-
+/**
+Team: Glory404
+Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+**/
 public class AdventureGameModelFacade {
 	
 	private Player thePlayer;
@@ -13,16 +16,9 @@ public class AdventureGameModelFacade {
 	  thePlayer.setRoom(theCave.createAdventure());
 	  viewText = thePlayer.getLoc().getDesc();
   }
-  
-    //make new startQuest? ‹need to interact with interact with startQuest()
-    //get rid of wihle loop, just have it as an object that gets called.
-    
-    
-    //where most of the refactoring is needed...
-    //new game button?
-    //get description, messageBox(String msg)
-    //drop item, re got items for list...?
+
   public void goUp(){
+
       viewText = thePlayer.go(4);
   }
 
@@ -80,10 +76,15 @@ public class AdventureGameModelFacade {
 
 >>>>>>> 679cc09b735416ab568e648d71fb59fe7225f993
 
+<<<<<<< HEAD
   public String getViewText(){
 	  return viewText;
   }
  // Surely you will need other methods to deal with
  // picking up and dropping things.
+=======
+>>>>>>> 804508df6e5dded111c57c948afb1bfc6c91286d
 
+ 
 }
+
