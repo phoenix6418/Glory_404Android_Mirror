@@ -6,6 +6,7 @@ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
 **/
 //Written by: David Sahud
 
+import cs314_A2.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
