@@ -130,17 +130,18 @@ JLabel separator1 = addLabel
 			   }
    }
 
-    // Left as an exercise. 
+   //Drop an item
     private void drop() {
 	     //  Set up a dialog to talk to the model and
-
          //  determine what items to pick up.
     	GBDialog msg = new GBDialog (null);
         if (model.handsEmpty ()) {
            msg.messageBox ("You have nothing to drop.");
-        } else if (model.roomIsFull()) {
+        }
+        else if (model.roomIsFull()) {
             msg.messageBox ("Room is full."); 
-    	} else {
+    	}
+        else {
            Item[] drop = model.myThings();
            Item choice = (Item) JOptionPane.showInputDialog(null,"Choose item that you want to drop",
   		                       "DROP",
@@ -148,15 +149,21 @@ JLabel separator1 = addLabel
   		                       null,
   		                       drop,
   		                       drop[0].toString());
-     		//if ((choice != null) && (choice.toString().length() > 0)) {
-           if (choice.toString().equals(drop[0].toString())) {
-              model.drop(1);
-              displayCurrentInfo();
-              return;
-     		} else {
-              model.drop(2);
-              displayCurrentInfo();
-              return;
+           //If user selected an item and clicked OK
+           if (choice != null){
+        	   for(int i = 0; i<drop.length; i++){
+        		   //Finds the correct item to drop
+        		   if(drop[i].toString().equals(choice.toString())){
+        			   model.drop(i + 1);			//Drops the item; player's item array starts at 1, not 0
+        			   displayCurrentInfo();		//Updates the display pane
+        			   return;
+        		   }
+        	   }
+           }
+           //If the user clicked cancel or otherwise exited the box
+           else {
+        	   //Do nothing
+        	   return;
            }
         }
    }

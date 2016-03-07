@@ -65,6 +65,7 @@ public class Player {
     }
     
     //remove item from myThings and shift
+    //The first item in the inventory has itemNum = 1
     public void drop(int itemNum){
         if (itemNum > 0 & itemNum <= itemCount){
             switch(itemNum){
