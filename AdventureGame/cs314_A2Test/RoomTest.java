@@ -20,6 +20,7 @@ public class RoomTest {
 	}
 	
 	// test roomFull()
+	// Modified by Bolin
 	@Test
 	public void testRoomFull() {
 		Room r1 = new Room();
@@ -54,10 +55,17 @@ public class RoomTest {
 	
 	// test enter (Player p)
 	//		getDesc()
+	// Modified by Bolin
 	@Test
 	public void testEnterAndGetDesc() {
 		Room r1 = new Room();
 		r1.setDesc("r1");
+		Item i1 = new Item();
+		Item i2 = new Item();
+		i1.setDesc("i1");
+		i2.setDesc("i2");
+		r1.addItem(i1);
+		r1.addItem(i2);
 		Player p = new Player();
 		r1.enter(p);
 		assertEquals(r1.getDesc() , p.getLoc().getDesc());
