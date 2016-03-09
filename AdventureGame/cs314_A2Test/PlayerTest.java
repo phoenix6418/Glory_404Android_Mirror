@@ -202,7 +202,24 @@ public class PlayerTest {
 	//showMyThings
 	
 	
-	
+	// Written by: Bolin Liu
+	@Test
+	public void myThingsTest () {
+		Player guy = new Player();
+		Room troom = new Room();
+		Item i = new Item();
+	    i.setDesc("Item i");
+	    Item i2 = new Item();
+	    i2.setDesc("Item i2");
+	    troom.addItem(i);
+	    troom.addItem(i2);
+	    guy.setLoc(troom);
+	    guy.pickUp(i);
+	    guy.pickUp(i2);
+		Item items[] = guy.myThings();
+		assertEquals(items[0].getDesc(), "Item i");
+		assertEquals(items[1].getDesc(), "Item i2");
+	}
 	
 
 }
