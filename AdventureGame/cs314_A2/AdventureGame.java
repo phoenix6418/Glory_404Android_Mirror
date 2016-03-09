@@ -201,7 +201,17 @@ public class AdventureGame {
 	     	case 'e': case 'E': case 'w': case 'W':
 	     	case 'u': case 'U': case 'd': case 'D': 
 	     		direction = convertDirection(inputString);
-	     		thePlayer.go(direction); 
+	     		
+	     		//We must print wall's output to console if the player tries to enter one.
+	     		Player wallTester = new Player();
+	     		wallTester.setLoc(thePlayer.getLoc());
+	     		if(wallTester.go(direction).equals("Ouch! That hurts.")){
+	     			System.out.println(thePlayer.go(direction) + "\n");
+	     		}
+	     		//Otherwise, we go silently.
+	     		else{
+	     			thePlayer.go(direction);
+	     		}
 	     		break;
             // Grab Item
 	     	case 'g': case 'G':
@@ -224,7 +234,7 @@ public class AdventureGame {
 	     			int itemToToss = chooseDropItem(thePlayer,keyboard);
 	     			thePlayer.drop(itemToToss);
 	     		}
-      }//end of siwtch
+      }//end of switch
 	} //end of while
 }//end of startQuest function
 
