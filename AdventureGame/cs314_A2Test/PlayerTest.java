@@ -221,5 +221,26 @@ public class PlayerTest {
 		assertEquals(items[1].getDesc(), "Item i2");
 	}
 	
+	// Written by: Bolin Liu
+	@Test
+	public void goTest () {
+		Player p = new Player();
+		Room r1 = new Room();
+		r1.setDesc("r1");
+		Room r2 = new Room();
+		r2.setDesc("r2");
+		r1.setSide(2, r2);
+		Item i = new Item();
+		i.setDesc("i");
+		
+		r2.addItem(i);
+		
+		p.setLoc(r1);
+		p.go(2);
+		Item items[] = p.getLoc().getRoomContents();
+		assertEquals(items[0].getDesc(), "i");
+		
+	}
+	
 
 }
