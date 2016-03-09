@@ -20,12 +20,13 @@ public class RoomTest {
 	}
 	
 	// test roomFull()
-//	@Test
+	@Test
 	public void testRoomFull() {
 		Room r1 = new Room();
 		Treasure t1 = new Treasure();
 		Treasure t2 = new Treasure();
 		r1.addItem(t1);
+		assertFalse(r1.roomFull());
 		r1.addItem(t2);
 		assertTrue(r1.roomFull());
 	}
