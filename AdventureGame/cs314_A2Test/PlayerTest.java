@@ -112,6 +112,7 @@ public class PlayerTest {
 	    
 	}
 	//Written by: David Sahud
+	// Modified by Bolin Liu
 	@Test 
 	public void numitemsCarriedTest(){
 		Player guy = new Player();
@@ -120,13 +121,26 @@ public class PlayerTest {
 	    Treasure theTreasure = new Treasure();
 	    theTreasure.setDesc("A bag filled with gold bars.");
 	    troom.addItem(theTreasure);
+	    
+	    Item i = new Item();
+	    i.setDesc("Item i");
+	    troom.addItem(i);
+	    
 	    guy.setLoc(troom);
 	    assertTrue(guy.numItemsCarried() == 0);
 
 	    guy.pickUp(theTreasure);
 	    guy.drop(2);
 	    assertTrue(guy.numItemsCarried() == 1);
+	    guy.pickUp(i);
+	    assertTrue(guy.numItemsCarried() == 2);
+	    guy.drop(3);
+	    assertTrue(guy.numItemsCarried() == 2);
+	    guy.drop(0);
+	    assertTrue(guy.numItemsCarried() == 2);
 	    
+	    guy.drop(2);
+	    assertTrue(guy.numItemsCarried() == 1);
 	    guy.drop(1);
 	    assertTrue(guy.numItemsCarried() == 0);
 	//numItemsCarried	
