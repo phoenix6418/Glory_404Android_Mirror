@@ -37,5 +37,33 @@ public class DoorTest {
 		String str = door.enter(aPlayer);
 		System.out.println(str);
 	}
+	//enter a door from outside 
+	// with wrong
+	@Test
+	public void EnterDoorWrongKey() {
+		Room out;
+		Room in;
+		Key key = new Key();
+		Key key2 = new Key();
+		Door door;
+		Player aPlayer;
+	
+		out = new Room();
+		in = new Room();
+		door = new Door(out,in,key);
+		aPlayer = new Player();
+		
+		out.addItem(key);
+		out.addItem(key2);
+		aPlayer.setRoom(out);
+		aPlayer.pickUp(key2);
+		
+		in.setDesc("inRoom");
+		out.setDesc("outRoom");
+		
+		String str = door.enter(aPlayer);
+		System.out.println(str);
+	}
+	
 	
 }
