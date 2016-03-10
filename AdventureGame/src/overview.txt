@@ -3,12 +3,10 @@ Team members:
 
 
 Specific contributions by each person:
-	- Bolin Liu:	Made Grab and Drop functions work. Add useful methods to make connections between classes. wrote tests for room.
-	- Kerry McKean:	Refactored room descriptions and other output to display in the "Your view" box instead of printing to console.  Wrote JUnit tests for Item.java and Wall.java
-	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
-				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
-	- Xuehao Hu: finished the player movements in AdventureGameModeFacad.java, and added Junit tests for those movements functions
-	
+	- Bolin Liu: Wrote Room and Player Test. Added Comments for all tests. Located defects. Food suppliment!
+	- Kerry McKean:  Fixed bugs from last assignment, updated AdventureGame, wrote tests which ended up being unnecessary, provided 		moral and technical support
+	- David Sahud: Updated defects found in door.java within overview.txt. Set up user stories and tasks in A3-US-1.txt.
+	- Xuehao Hu: added doorTest and corresponding comments, also did some bugs fixing, investigation about git commands
 Defects Found:
 Door.java: When using the function enter, the case where the room the door connects does not lead to current room is not checked. 
 An error is now thrown if this happen. This was found in test EnterNoAccessRoom() within DoorTest.java. In the actual behavior the player 
@@ -17,30 +15,24 @@ error should indicate that an illegal action has been attempted.
 
 
 Summarized test results for all unit tests: 
-Total Test: 19
+Total Test: 24
 All tests pass.
 
-ItemTest.java: 1 test
-setDesc, getDesc
+Total # Black Box Tests: 14
+Player: 100% Class, 100% method, 100% line, 100% branch
+Room: 100% Class, 100% method, 100% line, 100% branch
+Door: 100% Class, 100% method, 100% line, 100% branch
 
-WallTest.java: 1 test
-enter
-
-RoomTest.java: 6 test
-enter, roomFull, roomEmpty, removeItem, addItem, setSide, setDesc, getRoomContents, exit, getDesc()
-
-AdventureGameTest.java: 1 test
-convertDirectionTest
-
-PlayerTest.java: 10 tests
-showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, handsFull, pickup, look.
-
+Total # White Box Tests: 10
+Player: 100% Class, 100% method, 100% line, 100% branch
+Room: 100% Class, 100% method, 100% line, 100% branch
+Door: 100% Class, 100% method, 100% line, 100% branch
 
 Time (min) spent by each person on this assignment:
-	Kerry:   480 minutes
-	Bolin:   450 minutes
-	Xuehao:  410 minutes
-	David:   420 minutes
+	Kerry:    420 minutes
+	Bolin:    420 minutes
+	Xuehao:   420 minutes
+	David:    420 minutes
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.

@@ -1,10 +1,13 @@
-package cs314_A2Test;
+package cs314_A3Test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 import cs314_A2.AdventureGameModelFacade;
-
+/**
+ Team: Glory404
+ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+ **/
 public class AdventureGameModelFacadeTest {
 
 	@Test

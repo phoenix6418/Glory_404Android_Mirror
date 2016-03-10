@@ -1,14 +1,17 @@
-package cs314_A2Test;
+package cs314_A3Test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import cs314_A2.Door;
-import cs314_A2.Key;
-import cs314_A2.Player;
-import cs314_A2.Room;
-
+import cs314_A3.Door;
+import cs314_A3.Key;
+import cs314_A3.Player;
+import cs314_A3.Room;
+/**
+ Team: Glory404
+ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+ **/
 // case 1
 // Black box
 // enter a door from RIGHT outside room 
