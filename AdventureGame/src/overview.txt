@@ -9,6 +9,13 @@ Specific contributions by each person:
 				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
 	- Xuehao Hu: finished the player movements in AdventureGameModeFacad.java, and added Junit tests for those movements functions
 	
+Defects Found:
+Door.java: When using the function enter, the case where the room the door connects does not lead to current room is not checked. 
+An error is now thrown if this happen. This was found in test EnterNoAccessRoom() within DoorTest.java. In the actual behavior the player 
+doesn't move anywhere. The expected behavior is that information of the room is displayed to the player. Since the player hasn't moved an 
+error should indicate that an illegal action has been attempted.
+
+
 Summarized test results for all unit tests: 
 Total Test: 19
 All tests pass.
