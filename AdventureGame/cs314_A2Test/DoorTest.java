@@ -35,8 +35,15 @@ public class DoorTest {
 		out.setDesc("outRoom");
 		
 		String str = door.enter(aPlayer);
-		System.out.println(str);
-	}
+		
+		assertEquals("Your key works! The door creaks open,"+'\n'+
+				"and slams behind you after you pass through."+'\n'+
+				""+'\n'+
+				"inRoom"+'\n'+
+				""+'\n'+
+				"Room Contents: "+'\n'+
+				"", str);
+		}
 	
 	//enter a door from RIGHT outside room 
 	// with wrong key
@@ -63,7 +70,9 @@ public class DoorTest {
 		out.setDesc("outRoom");
 		
 		String str = door.enter(aPlayer);
-		System.out.println(str);
+		assertEquals("You don't have the key for this door!"+'\n'+
+				"Sorry."+'\n'+
+				"", str);
 	}
 	
 		//enter a door from outside 
@@ -93,8 +102,21 @@ public class DoorTest {
 			String strin = door.enter(aPlayer);
 			String strout = door.enter(aPlayer);
 			
-			System.out.println(strin);
-			System.out.println(strout);
+			assertEquals("Your key works! The door creaks open,"+'\n'+
+					"and slams behind you after you pass through."+'\n'+
+					""+'\n'+
+					"inRoom"+'\n'+
+					""+'\n'+
+					"Room Contents: "+'\n'+
+					"", strin);
+			
+			assertEquals("Your key works! The door creaks open,"+'\n'+
+					"and slams behind you after you pass through."+'\n'+
+					""+'\n'+
+					"outRoom"+'\n'+
+					""+'\n'+
+					"Room Contents: "+'\n'+
+					"", strout);
 		}
 		
 		//enter a door from WRONG outside 
@@ -126,6 +148,11 @@ public class DoorTest {
 					
 			String strin = door.enter(aPlayer);	
 			System.out.println(strin);
+			
+			assertEquals("Your key works! The door creaks open,"+'\n'+
+					"and slams behind you after you pass through."+'\n'+
+					""+'\n'+
+					"", strin);
 		}
 	
 }
