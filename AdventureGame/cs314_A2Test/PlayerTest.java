@@ -112,6 +112,7 @@ public class PlayerTest {
 	    
 	}
 	//Written by: David Sahud
+	// Modified by Bolin Liu
 	@Test 
 	public void numitemsCarriedTest(){
 		Player guy = new Player();
@@ -120,13 +121,26 @@ public class PlayerTest {
 	    Treasure theTreasure = new Treasure();
 	    theTreasure.setDesc("A bag filled with gold bars.");
 	    troom.addItem(theTreasure);
+	    
+	    Item i = new Item();
+	    i.setDesc("Item i");
+	    troom.addItem(i);
+	    
 	    guy.setLoc(troom);
 	    assertTrue(guy.numItemsCarried() == 0);
 
 	    guy.pickUp(theTreasure);
 	    guy.drop(2);
 	    assertTrue(guy.numItemsCarried() == 1);
+	    guy.pickUp(i);
+	    assertTrue(guy.numItemsCarried() == 2);
+	    guy.drop(3);
+	    assertTrue(guy.numItemsCarried() == 2);
+	    guy.drop(0);
+	    assertTrue(guy.numItemsCarried() == 2);
 	    
+	    guy.drop(2);
+	    assertTrue(guy.numItemsCarried() == 1);
 	    guy.drop(1);
 	    assertTrue(guy.numItemsCarried() == 0);
 	//numItemsCarried	
@@ -188,7 +202,45 @@ public class PlayerTest {
 	//showMyThings
 	
 	
+	// Written by: Bolin Liu
+	@Test
+	public void myThingsTest () {
+		Player guy = new Player();
+		Room troom = new Room();
+		Item i = new Item();
+	    i.setDesc("Item i");
+	    Item i2 = new Item();
+	    i2.setDesc("Item i2");
+	    troom.addItem(i);
+	    troom.addItem(i2);
+	    guy.setLoc(troom);
+	    guy.pickUp(i);
+	    guy.pickUp(i2);
+		Item items[] = guy.myThings();
+		assertEquals(items[0].getDesc(), "Item i");
+		assertEquals(items[1].getDesc(), "Item i2");
+	}
 	
+	// Written by: Bolin Liu
+	@Test
+	public void goTest () {
+		Player p = new Player();
+		Room r1 = new Room();
+		r1.setDesc("r1");
+		Room r2 = new Room();
+		r2.setDesc("r2");
+		r1.setSide(2, r2);
+		Item i = new Item();
+		i.setDesc("i");
+		
+		r2.addItem(i);
+		
+		p.setLoc(r1);
+		p.go(2);
+		Item items[] = p.getLoc().getRoomContents();
+		assertEquals(items[0].getDesc(), "i");
+		
+	}
 	
 
 }
