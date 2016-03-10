@@ -1,0 +1,57 @@
+Acceptance Criteria:
+-The game has unit tests that do not overlap in what they test.
+-The combination of unit tests provides statement and branch coverage. If 100% branch coverage cannot be achieved, an explanation of why this is not possible is provided.
+-A report of coverage, the defects found by test,s and the defects fixed is provided.
+
+	1	Split story A (SP 5): As a CS 314 student, I want to write Black Box (BB) tests for the Adventure Game description and a specific list of classes and methods in the Adventure game (see the Description section below), so that I get high branch coverage just by writing BB tests. (See the Notes in the Description section below for additional information you need to deliver the acceptance criteria listed below.)
+  Acceptance Criteria (AC):
+	1	Appropriate BB tests are identified, beginning with tests derived from the game description and APIs of the list of classes/methods that need to be tested.
+	2	For each test, the input domain(s) are identifed, their equivalence classes determined, appropriate boundary conditions identified, and complete test cases determined.
+	3	For each JUnit test class, a short description of what is being testing, the information determined from AC 1 and 2, and the initial state of the object under test, are documented as comments at the beginning of the test class file. Actual test cases are added as comments just above the JUnit methods that implement them. A short description of how the output state is checked for correctness must be part of the test case comments.
+	4	The new BB tests are run and their results documented in the overview.txt file, along with the number of defects that they find. These defects must be fixed, and all the tests must pass.
+	5	The new BB tests are run (along with any previously-written JUnit tests) under the EclEmma coverage tool, and the coverage results for classes, methods, lines, and branches are documented in the overview.txt file.
+	6	A list of all defects found through BB testing is documented in the overview.txt file: for each defect, identify and describe the test and the inputs, and the expected and actual behavior.
+	7	Meet 'Definition of Done' (DoD), below.
+
+		Tasks (estimation/actual time):
+		-(1hr)Complete/Update BB tests for Room.java
+		-(1hr)Comment BB tests for Room.java 		
+		-(1hr)Complete/Update BB tests for Player.java
+		-(1hr)Comment BB tests for Plater.java 		
+		-(1hr)Complete/Update BB tests for Door.java
+		-(1hr)Comment BB tests for Door.java 
+
+
+
+	1	Split story B (SP 5): As a CS 314 student, I want to write White Box (WB) tests that increase unit test coverage of the Adventure game so that I have more coverage than with just BB tests, and none of the tests overlap.
+	2	Acceptance Criteria (AC):
+	1	Based on the coverage results from Split User Story A, the classes/methods that need higher coverage are determined.
+	2	Specific WB test input that exercises the code is determined, and JUnit tests are created. Each new WB JUnit test class contains comments at the top that indicated that this is a WB test, the purpose of the tests in the class, and the test cases, similar to the comments from AC 3 for Split User Story A.
+	3	All tests (BB, WB, and all previously-written JUnit tests) are run under the EclEmma coverage tool and the coverage results for classes, methods, lines, and branches are documented, along with the number of defects that are found. The defects must be fixed, and all tests must pass.
+	4	WB tests are added, using the instructions in AC 2 and 3 in Split User Story B, until 100% branch coverage is achieved for the specific list of classes and methods or the branch coverage does not increase when new WB tests are added.
+	5	If 100% branch coverage is not achieved, the reasons for this are documented in the overview.txt file.
+	6	WB tests do not overlap BB tests. That is, as each new test is added, coverage results increase. The goal is that nothing is tested with both BB and WB tests.
+	7	A list of all defects found through WB testing is documented in the overview.txt file: for each defect, identify and describe the test and the inputs, and the expected and actual behavior.
+	8	Meet 'Definition of Done' (DoD), below.
+
+		Tasks (estimation/actual time):
+		-(1hr)Complete/Update WB tests for Room.java 
+		-(1hr)Comment WB tests for Room.java 		
+		-(1hr)Complete/Update WB tests for Player.java
+		-(1hr)Comment WB tests for Plater.java 		
+		-(1hr)Complete/Update WB tests for Door.java
+		-(1hr)Comment WB tests for Door.java 
+
+Definition of Done (DoD):
+For all user stories:
+	•	GitHub main branch code runs with no warnings and a user can execute all commands at least using the GUI.
+	•	All code changes are reviewed before being merged onto the main branch 
+	•	All code changes are merged into the main branch
+
+For CS314 development:
+	•	All work is done on individual branches with frequent commits and pushes to GitHub before being merged onto the main branch.
+	•	Commit messages include user story and task
+	•	All user stories and point estimates are in GitHub
+	•	All tasks and time estimates and actual time taken are in GitHub
+	•	The overview.txt file for A3 has all required items in it
+	•	All the tests, BB, WB, and previously-written JUnit tests can be run from a single AllTests.java class.
