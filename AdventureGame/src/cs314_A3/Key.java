@@ -1,9 +1,8 @@
-package cs314_A2;
+package cs314_A3;
 /**
  Team: Glory404
  Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
  **/
-
 /**  Adventure Game  Program Code
      Copyright (c) 1999 James M. Bieman
 
@@ -12,15 +11,13 @@ package cs314_A2;
 
      The main routine is AdventureGame.main
 				    
+**/
 
-				    **/
 
-// interface CaveSite
-/*
- Used as each side of the room.
- This allows players to move between rooms through the doors that link the CaveSites
- */
-public interface CaveSite{
-  String enter(Player p);
+// class Key.
+// key object to open doors
+// functions: setDesc() set description for the keys
+//			  getDesc() get description for the keys
+public class Key extends Item {
 }
 

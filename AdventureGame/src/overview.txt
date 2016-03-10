@@ -3,12 +3,18 @@ Team members:
 
 
 Specific contributions by each person:
-	- Bolin Liu:	Made Grab and Drop functions work. Add useful methods to make connections between classes. wrote tests for room.
-	- Kerry McKean:	Refactored room descriptions and other output to display in the "Your view" box instead of printing to console.  Wrote JUnit tests for Item.java and Wall.java
-	- David Sahud: Implemented JUnit tests for methods in Player.java. Implemented JUnit test AdventureGame.java. 
-				   Added team names to new files. Resolved merge conflicts. Refactored A1 project for A2. Arranged group meeting.
-	- Xuehao Hu: finished the player movements in AdventureGameModeFacad.java, and added Junit tests for those movements functions
-	
+	- Bolin Liu:
+	- Kerry McKean:	
+	- David Sahud: 
+	- Xuehao Hu: 
+
+Defects Found:
+
+Door.java: When using the function enter, the case where the room the door connects does not lead to current room is not checked. 
+An error is now thrown if this happen. This was found in test EnterNoAccessRoom() within DoorTest.java. In the actual behavior the player 
+doesn't move anywhere. The expected behavior is that information of the room is displayed to the player. Since the player hasn't moved an 
+error should indicate that an illegal action has been attempted.
+
 Summarized test results for all unit tests: 
 Total Test: 19
 All tests pass.
@@ -30,14 +36,11 @@ showMyThings, setLoc, setRoom, handsempty, numitemsCarried, drop, haveItem, hand
 
 
 Time (min) spent by each person on this assignment:
-	Kerry:   480 minutes
-	Bolin:   450 minutes
-	Xuehao:  410 minutes
-	David:   420 minutes
+	Kerry:   
+	Bolin:   
+	Xuehao:  
+	David:   
 
 CSU Honor Pledge:
 I have not given, received, or used any unauthorized assistance.
-David Sahud
-Kerry McKean
-Bolin Liu
-Xuehao Hu
+

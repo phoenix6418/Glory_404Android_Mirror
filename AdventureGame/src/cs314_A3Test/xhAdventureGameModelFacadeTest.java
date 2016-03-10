@@ -1,6 +1,6 @@
-package cs314_A2Test; 
+package cs314_A3Test; 
 
-import cs314_A2.*;
+import cs314_A3.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

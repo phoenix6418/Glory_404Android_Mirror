@@ -1,4 +1,4 @@
-package cs314_A2Test;
+package cs314_A3Test;
 
 /**
 Team: Glory404
@@ -9,7 +9,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ PlayerTest.class, AdventureGameTest.class, RoomTest.class, ItemTest.class, WallTest.class, xhAdventureGameModelFacadeTest.class })
+@SuiteClasses({ PlayerTest.class, AdventureGameTest.class, RoomTest.class, ItemTest.class, DoorTest.class,WallTest.class, xhAdventureGameModelFacadeTest.class })
 public class AllTests {
 
 }

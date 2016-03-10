@@ -1,4 +1,4 @@
-package cs314_A2Test;
+package cs314_A3Test;
 
 //Author: Kerry McKean
 //Tests the method in Wall.java
