@@ -9,10 +9,15 @@ import org.junit.Test;
 import cs314_A2.*;
 
 
+// Black Box Tests: 3
+// White Box Tests: 4
 
 public class RoomTest {
 	
 	// test roomEmpty()
+	// White Box
+	// Create an empty room and puts nothing in it.
+	// Test if it is empty.
 	@Test
 	public void testRoomEmpty() {
 		Room r1 = new Room();
@@ -20,7 +25,10 @@ public class RoomTest {
 	}
 	
 	// test roomFull()
-	// Modified by Bolin
+	// White Box
+	// Modified by Bolin Liu
+	// Add two items in a room. Test if the number
+	// of items reaches the limit.
 	@Test
 	public void testRoomFull() {
 		Room r1 = new Room();
@@ -33,6 +41,9 @@ public class RoomTest {
 	}
 	
 	// test addItem(Item theItem)
+	// White Box
+	// Add item into the room and test if 
+	// the room is still empty.
 	@Test
 	public void testAddItem() {
 		Room r1 = new Room();
@@ -43,6 +54,9 @@ public class RoomTest {
 	}
 	
 	// test removeItem (Item theItem)
+	// White Box
+	// remove item from the room and 
+	// see if the item is really gone
 	@Test
 	public void testRemoveItem() {
 		Room r1 = new Room();
@@ -55,7 +69,11 @@ public class RoomTest {
 	
 	// test enter (Player p)
 	//		getDesc()
+	// Black Box
 	// Modified by Bolin
+	
+	// Enter the room that is prepared to player.
+	// Test if the room is the room that the player is in.
 	@Test
 	public void testEnterAndGetDesc() {
 		Room r1 = new Room();
@@ -74,6 +92,11 @@ public class RoomTest {
 	
 	// test exit (int direction, Player p)
 	//		setSide (String d)
+	// exit: Black Box, setSide: White Box
+	// Create two adjacent rooms. enter r1, check if the
+	// player is in r1.
+	// Exit from r1 and go to direction 1 to r2.
+	// Test if the player is in r2.
 	@Test
 	public void testExitAndSetSide() {
 		Room r1 = new Room();
@@ -88,6 +111,9 @@ public class RoomTest {
 	}
 	
 	// test getRoomContents()
+	// Black Box
+	// Test if the room description matches the 
+	// expected description.
 	@Test
 	public void testGetRoomContents() {
 		Room r1 = new Room();
