@@ -11,7 +11,7 @@ import cs314_A2.Room;
 
 public class DoorTest {
 
-	//enter a door from outside 
+	//enter a door from RIGHT outside room 
 	// with correct key
 	@Test
 	public void EnterDoorWithKey() {
@@ -37,8 +37,9 @@ public class DoorTest {
 		String str = door.enter(aPlayer);
 		System.out.println(str);
 	}
-	//enter a door from outside 
-	// with wrong
+	
+	//enter a door from RIGHT outside room 
+	// with wrong key
 	@Test
 	public void EnterDoorWrongKey() {
 		Room out;
@@ -65,8 +66,8 @@ public class DoorTest {
 		System.out.println(str);
 	}
 	
-	//enter a door from outside 
-		//and then enter out from in
+		//enter a door from outside 
+		//and then enter outSide from inSide
 		// with correct key
 		@Test
 		public void EnterDoorWithKeyFromInCaveSite() {
@@ -96,39 +97,35 @@ public class DoorTest {
 			System.out.println(strout);
 		}
 		
-		//enter a door from outside 
-				//and then enter out from in
-				// with correct key
-				@Test
-				public void EnterNoAccessRoom() {
-					Room out;
-					Room in;
-					Room noAccess;
-					Key key = new Key();
-					Door door;
-					Player aPlayer;
+		//enter a door from WRONG outside 
+		// with correct key
+		@Test
+		public void EnterNoAccessRoom() {
+			Room out;
+			Room in;
+			Room noAccess;
+			Key key = new Key();
+			Door door;
+			Player aPlayer;
 					
-					out = new Room();
-					in = new Room();
-					noAccess = new Room();
-					door = new Door(out,in,key);
-					aPlayer = new Player();
+			out = new Room();
+			in = new Room();
+			noAccess = new Room();
+			door = new Door(out,in,key);
+			aPlayer = new Player();
 					
-					out.addItem(key);
-					aPlayer.setRoom(noAccess);
+			out.addItem(key);
+			aPlayer.setRoom(noAccess);
 					
-					aPlayer.pickUp(key);
+			aPlayer.pickUp(key);
 					
-					aPlayer.setRoom(noAccess);
+			aPlayer.setRoom(noAccess);
 					
-					in.setDesc("inRoom");
-					out.setDesc("outRoom");
+			in.setDesc("inRoom");
+			out.setDesc("outRoom");
 					
-					String strin = door.enter(aPlayer);
-					String strout = door.enter(aPlayer);
-					
-					System.out.println(strin);
-					System.out.println(strout);
-				}
+			String strin = door.enter(aPlayer);	
+			System.out.println(strin);
+		}
 	
 }
