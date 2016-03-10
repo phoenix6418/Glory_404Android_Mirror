@@ -1,9 +1,12 @@
-package cs314_A2Test;
+package cs314_A3Test;
 
 //Author: Kerry McKean
 //Tests the methods in Item.java
-
-import cs314_A2.*;
+/**
+ Team: Glory404
+ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+ **/
+import cs314_A3.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

@@ -1,5 +1,5 @@
-package cs314_A2Test;
-import cs314_A2.*;
+package cs314_A3Test;
+import cs314_A3.*;
 /**
 Team: Glory404
 Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.

@@ -1,7 +1,10 @@
 // author: Bolin Liu
 // test methods in Room.java
-
-package cs314_A2Test;
+/**
+ Team: Glory404
+ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+ **/
+package cs314_A3Test;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

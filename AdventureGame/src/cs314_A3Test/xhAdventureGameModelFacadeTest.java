@@ -1,6 +1,9 @@
-package cs314_A2Test; 
-
-import cs314_A2.*;
+package cs314_A3Test;
+/**
+ Team: Glory404
+ Members: David Sahud, Xuehao(David) Hu, Bolin Liu, Kerry McKean.
+ **/
+import cs314_A3.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
