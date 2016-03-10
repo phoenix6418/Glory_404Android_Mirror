@@ -96,6 +96,39 @@ public class DoorTest {
 			System.out.println(strout);
 		}
 		
-		
+		//enter a door from outside 
+				//and then enter out from in
+				// with correct key
+				@Test
+				public void EnterNoAccessRoom() {
+					Room out;
+					Room in;
+					Room noAccess;
+					Key key = new Key();
+					Door door;
+					Player aPlayer;
+					
+					out = new Room();
+					in = new Room();
+					noAccess = new Room();
+					door = new Door(out,in,key);
+					aPlayer = new Player();
+					
+					out.addItem(key);
+					aPlayer.setRoom(noAccess);
+					
+					aPlayer.pickUp(key);
+					
+					aPlayer.setRoom(noAccess);
+					
+					in.setDesc("inRoom");
+					out.setDesc("outRoom");
+					
+					String strin = door.enter(aPlayer);
+					String strout = door.enter(aPlayer);
+					
+					System.out.println(strin);
+					System.out.println(strout);
+				}
 	
 }
