@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import cs314_A2.*;
+import cs314_A3.*;
 
 
 // Black Box Tests: 3
