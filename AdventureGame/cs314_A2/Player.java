@@ -79,7 +79,10 @@ public class Player {
                     break;
                 }
             }
-        }
+        } //else {
+        	// Should Print Error msg
+        	// System.out.println("Enter number between 0 and 2");
+        //}
     }
     
     //set the myLoc
