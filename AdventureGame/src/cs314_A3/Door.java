@@ -48,6 +48,10 @@ public class Door implements CaveSite {
     }
     else if (p.getLoc() == inSite){
     	message += outSite.enter(p);
+    }else{
+    	//defect1:missing a case, which is enter a door that is not connecting current room 
+    	//wrong room
+    	message +="wrong room";
     }
     return message;
  }

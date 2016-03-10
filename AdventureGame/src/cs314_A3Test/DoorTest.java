@@ -9,8 +9,35 @@ import cs314_A2.Key;
 import cs314_A2.Player;
 import cs314_A2.Room;
 
+// case 1
+// Black box
+// enter a door from RIGHT outside room 
+// with correct key
+
+// case 2
+// enter a door from RIGHT outside room 
+// with wrong key
+
+// case 3
+// Black box
+// enter a door from RIGHT outside room 
+// with no key
+
+// case 4
+// White box
+// enter a door from outside 
+// and then enter outSide from inSide
+// with correct key
+
+// case 5
+// White box
+// Defect: missing a case, which is enter a door that is not connecting current room 
+// wrong room
+// enter a door from WRONG outside 
+// with correct key
 public class DoorTest {
 
+	// Black box
 	//enter a door from RIGHT outside room 
 	// with correct key
 	@Test
@@ -45,7 +72,8 @@ public class DoorTest {
 				"", str);
 		}
 	
-	//enter a door from RIGHT outside room 
+	// Black box
+	// enter a door from RIGHT outside room 
 	// with wrong key
 	@Test
 	public void EnterDoorWrongKey() {
@@ -75,6 +103,38 @@ public class DoorTest {
 				"", str);
 	}
 	
+	// Black box
+	// enter a door from RIGHT outside room 
+	// with no key
+	@Test
+	public void EnterDoorWithNoKey() {
+		Room out;
+		Room in;
+		Key key = new Key();
+		Key key2 = new Key();
+		Door door;
+		Player aPlayer;
+	
+		out = new Room();
+		in = new Room();
+		door = new Door(out,in,key);
+		aPlayer = new Player();
+		
+		out.addItem(key);
+		out.addItem(key2);
+		aPlayer.setRoom(out);
+		
+		in.setDesc("inRoom");
+		out.setDesc("outRoom");
+		
+		String str = door.enter(aPlayer);
+		assertEquals("You don't have the key for this door!"+'\n'+
+				"Sorry."+'\n'+
+				"", str);
+	}
+	
+	
+		// White box test
 		//enter a door from outside 
 		//and then enter outSide from inSide
 		// with correct key
@@ -119,6 +179,10 @@ public class DoorTest {
 					"", strout);
 		}
 		
+		//White box
+    	//Defect: missing a case, which is enter a door that is not connecting current room 
+    	//wrong room
+		
 		//enter a door from WRONG outside 
 		// with correct key
 		@Test
@@ -147,11 +211,12 @@ public class DoorTest {
 			out.setDesc("outRoom");
 					
 			String strin = door.enter(aPlayer);	
+			System.out.println(strin);
 			
 			assertEquals("Your key works! The door creaks open,"+'\n'+
 					"and slams behind you after you pass through."+'\n'+
 					""+'\n'+
-					"", strin);
+					"wrong room", strin);
 		}
 	
 }
