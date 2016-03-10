@@ -147,7 +147,6 @@ public class DoorTest {
 			out.setDesc("outRoom");
 					
 			String strin = door.enter(aPlayer);	
-			System.out.println(strin);
 			
 			assertEquals("Your key works! The door creaks open,"+'\n'+
 					"and slams behind you after you pass through."+'\n'+
