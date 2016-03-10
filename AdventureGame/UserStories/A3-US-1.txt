@@ -14,12 +14,12 @@ Acceptance Criteria:
 	7	Meet 'Definition of Done' (DoD), below.
 
 		Tasks (estimation/actual time):
-		-(1hr)Complete/Update BB tests for Room.java
-		-(1hr)Comment BB tests for Room.java 		
-		-(1hr)Complete/Update BB tests for Player.java
-		-(1hr)Comment BB tests for Plater.java 		
-		-(1hr)Complete/Update BB tests for Door.java
-		-(1hr)Comment BB tests for Door.java 
+		-(1hr/1hr)Complete/Update BB tests for Room.java
+		-(1hr/1hr)Comment BB tests for Room.java 		
+		-(1hr/1hr)Complete/Update BB tests for Player.java
+		-(1hr/1hr)Comment BB tests for Plater.java 		
+		-(1hr/1hr)Complete/Update BB tests for Door.java
+		-(1hr/1hr)Comment BB tests for Door.java 
 
 
 
@@ -35,12 +35,12 @@ Acceptance Criteria:
 	8	Meet 'Definition of Done' (DoD), below.
 
 		Tasks (estimation/actual time):
-		-(1hr)Complete/Update WB tests for Room.java 
-		-(1hr)Comment WB tests for Room.java 		
-		-(1hr)Complete/Update WB tests for Player.java
-		-(1hr)Comment WB tests for Plater.java 		
-		-(1hr)Complete/Update WB tests for Door.java
-		-(1hr)Comment WB tests for Door.java 
+		-(1hr/1hr)Complete/Update WB tests for Room.java 
+		-(1hr/1hr)Comment WB tests for Room.java 		
+		-(1hr/1hr)Complete/Update WB tests for Player.java
+		-(1hr/1hr)Comment WB tests for Plater.java 		
+		-(1hr/1hr)Complete/Update WB tests for Door.java
+		-(1hr/1hr)Comment WB tests for Door.java 
 
 Definition of Done (DoD):
 For all user stories:
